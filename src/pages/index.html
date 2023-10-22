@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to our Cleaning Company! We offer professional cleaning services for your home or office. Explore our range of cleaning packages and benefits. Trusted by many, we provide top-notch maintenance and exceptional customer reviews. Contact us today to experience a cleaner, healthier environment."
+    />
+    <title>Cleaning company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    <!-- <link rel="stylesheet" href="../styles/index.scss" /> -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
+    <!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script> -->
+  </head>
+  <body>
+    @@include('../partials/common/header.html')
+<main>
+  @@include('../partials/home/home-hero.html')
+  @@include('../partials/common/benefits-expanded.html')
+  @@include('../partials/home/home-cleaning-types.html')
+  @@include('../partials/home/home-cleaning-package.html')
+  @@include('../partials/common/maintenance.html')
+  @@include('../partials/common/benefits.html')
+  @@include('../partials/common/reviews.html')
+  @@include('../partials/common/trust.html')
+  @@include('../partials/common/questions.html')
+  @@include('../partials/common/connection.html')
+  @@include('../partials/banners/home-order-banner.html')
+</main>
+@@include('../partials/common/footer.html')
+@@include('../partials/common/location-modal.html')
+@@include('../partials/common/support-modal.html')
+@@include('../partials/common/subscription-modal.html')
+@@include('../partials/common/scroll-to-top.html')
+
+
+    <!-- <script src="../scripts/entry-scripts/main-index.js" type="module"></script> -->
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdz8-K9o4deBStiwnyH7xyn8_LXItI-sk&libraries=places&callback=initMap"
+    ></script>
+  </body>
+</html>

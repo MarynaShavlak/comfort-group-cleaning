@@ -1,0 +1,181 @@
+<ul class="form__user-info list">
+  <li class="row-container">
+    <div class="form__item form__item--short">
+      <input
+        class="form__input"
+        type="text"
+        name="userName"
+        placeholder="Ваше ім’я"
+        oninvalid="this.setCustomValidity('Будь ласка, заповніть Ваше ім\'я')"
+        onchange="try{setCustomValidity('')}catch(e){};"
+      />
+    </div>
+    <div class="form__item form__item--short">
+      <input
+        class="form__input"
+        type="text"
+        name="userSurname"
+        placeholder="Ваше прізвище"
+        oninvalid="this.setCustomValidity('Будь ласка, заповніть Ваше прізвище')"
+        onchange="try{setCustomValidity('')}catch(e){};"
+      />
+    </div>
+  </li>
+
+  <li class="form__item">
+    <label class="form__field">
+      <input
+        class="form__input"
+        type="tel"
+        pattern="[0-9]*"
+        name="userTel"
+        placeholder="Номер телефону"
+        oninvalid="this.setCustomValidity('Будь ласка, заповніть Ваш номер телефону, використовуючи тільки цифри')"
+        onchange="try{setCustomValidity('')}catch(e){};"
+      />
+    </label>
+  </li>
+  <li class="form__item">
+    <input
+      class="form__input"
+      type="email"
+      name="userEmail"
+      placeholder="Email"
+      oninvalid="this.setCustomValidity('Будь ласка, заповніть Ваш email у форматі email@mail.com')"
+      onchange="try{setCustomValidity('')}catch(e){};"
+    />
+  </li>
+  <li class="form__item">
+    <span class="form__wrap">
+      <input
+        class="form__input"
+        type="text"
+        name="userDate"
+        placeholder="На коли хочете прибирання?"
+      />
+
+      <svg class="form__icon icon icon--calendar" width="24" height="24">
+        <use href="../images/sprite.svg#icon-calendar"></use>
+      </svg>
+    </span>
+    <div class="shedule-wrap">
+      @@include('calendar.html')
+      @@include('work-shedule.html')
+    </div>
+  </li>
+  <li class="form__item">
+    <span class="form__wrap">
+      <input
+        class="form__input"
+        type="text"
+        name="userTime"
+        placeholder="На котру годину?"
+      />
+
+      <svg class="form__icon icon icon--clock" width="24" height="24">
+        <use href="../images/sprite.svg#icon-clock"></use>
+      </svg>
+    </span>
+    <div class="shedule-wrap">
+      @@include('time-picker.html')
+      @@include('work-shedule.html')
+    </div>
+  </li>
+  <li class="form__item">
+    <span class="form__wrap">
+      <input
+        class="form__input form__input--long-placeholder form__input--location"
+        type="text"
+        name="userLocation"
+        placeholder="Ваша повна адреса (включаючи номер будинку та квартиру)"
+        oninvalid="this.setCustomValidity('Будь ласка, заповніть Вашу адресу')"
+        onchange="try{setCustomValidity('')}catch(e){};"
+      />
+      <svg
+        class="form__icon icon form__icon--vertical-centered"
+        width="24"
+        height="24"
+      >
+        <use href="../images/sprite.svg#icon-location"></use>
+      </svg>
+    </span>
+    <label class="form__label"
+      >*Працюємо по місту Лодзь та +30 км за містом (виїзд за місто оплачується
+      окремо)</label
+    >
+  </li>
+  <li class="form__item">
+    <textarea
+      class="form__input form__comment"
+      name="userComment"
+      placeholder="Ваш коментар"
+    ></textarea>
+  </li>
+</ul>
+<div class="form__agreement-block">
+  <p class="form__error-text form__policy-error-text isHidden">
+    *Погодження з умовами та положеннями компанії є обов'язковим
+  </p>
+  <label class="form__agreement">
+    <input
+      checked
+      class="checkbox"
+      type="checkbox"
+      name="studio-policy-check"
+      value="accept-policy"
+    />
+    <span class="checkbox-custom"></span>
+    <span class="form__check-text"
+      >Оформлюючи замовлення, я погоджуюсь з&nbsp;<a
+        href="#"
+        class="form__agreement-link"
+        >договором публічної оферти</a
+      >
+      та&nbsp;<a href="#" class="form__agreement-link"
+        >політикою конфіденційності</a
+      ></span
+    >
+  </label>
+
+  <label class="form__agreement">
+    <input
+      checked
+      class="checkbox"
+      type="checkbox"
+      name="studio-policy-data"
+      value="accept-data"
+    />
+    <span class="checkbox-custom"></span>
+    <span class="form__check-text"
+      >Я даю згоду для використання моїх особистих данних в цілях відправки
+      підписки та акційних пропозицій</span
+    >
+  </label>
+</div>
+<p class="form__payment-error-text form__error-text isHidden">
+  *Оберіть спосіб оплати
+</p>
+<ul class="form__payment-buttons">
+  <li class="payment__item">
+    <button
+      class="option-button btn btn--light payment__btn card-payment-btn"
+      type="button"
+      data-id="Картой online"
+      data-type="userPaymentType"
+      aria-label="обрати опцію оплати замовлення онлайн"
+    >
+      <span>Картой online/Apple Pay/Google Pay</span>
+    </button>
+  </li>
+  <li class="payment__item">
+    <button
+      class="option-button btn btn--light payment__btn cash-payment-btn"
+      type="button"
+      data-id="Готівкою"
+      data-type="userPaymentType"
+      aria-label="обрати опцію оплати замовлення готівкою"
+    >
+      Готівкою
+    </button>
+  </li>
+</ul>

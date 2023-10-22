@@ -1,0 +1,215 @@
+.theme-toggler-wrap {
+  position: absolute;
+  display: flex;
+  @media screen and (max-width: 767px) {
+    top: 50%;
+    right:0;
+    transform: translate(-60px, -50%);
+    
+  }
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    top: 50%;
+    right:0;
+    transform: translate(-90px, -50%);
+    
+  }
+
+  width:27px;
+  height: 27px;
+  cursor: pointer;
+  transition: border $cubic;
+  @media screen and (min-width: 1440px) {
+    left: -90px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 90px;
+    height: 43px;
+    border-radius: 50px;
+  }
+}
+
+
+
+.theme-toggler-wrap--light {
+  @media screen and (min-width: 1440px) {
+  border: 3px solid $main-accent-color;
+  }
+  
+}
+.theme-toggler-wrap--dark {
+  @media screen and (min-width: 1440px) {
+  border: 3px solid $btn-arrow-color;
+}
+}
+
+
+.theme__circle {
+  position: absolute;
+  border-radius: 50%; 
+  background-color: transparent;
+  transition: background-color $cubic, transform $cubic;
+  width: 27px;
+  height: 27px;
+  @media screen and (min-width: 1440px) {
+    background-color: $main-accent-color;
+    transform: translate(-1px, -1px);
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.theme__circle--light{
+  background-color: transparent;
+  @media screen and (min-width: 1440px) {
+  background-color: $main-accent-color;
+}
+}
+
+.theme__circle--dark {
+  background-color: transparent;
+  @media screen and (min-width: 1440px) {
+  background-color: $btn-arrow-color;
+  transform: translate(calc(100% + 9px), -1px);
+}
+  }
+   
+
+
+.circle-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+}
+
+
+.circle__sun {
+  width: 11px;
+  height: 11px;
+  background-color: $main-accent-color;
+  @media screen and (min-width: 1440px) {
+    background-color: $first-additional-bg-color;
+  }
+  transition: opacity $cubic;
+  opacity: 1;
+}
+
+.circle__sun--hidden {
+  opacity: 0;
+}
+
+.circle__moon {
+  position: relative;
+  background-color: $primary-white-color;
+  @media screen and (min-width: 1440px) {
+  background-color: $primary-white-color;
+  }
+  
+  width: 27px;
+  height: 27px;
+  opacity : 1;
+  transition: opacity $cubic, transform $cubic;
+  transform: translate(-50%, -50%)scale(1);
+}
+
+.circle__moon--hidden {
+opacity : 0;
+transform: translate(-50%, -50%) scale(0);
+}
+
+.circle__moon::before {
+  position: absolute;
+  left: -4px;
+  top:0;
+  content:'';
+  width: 22px;
+  height: 22px;
+  background-color: $dark-theme;
+  @media screen and (min-width: 1440px) {
+    background-color: $btn-arrow-color; 
+  }
+  
+  border-radius: 50%;
+  
+}
+
+.circle__ray {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: $main-accent-color;
+  @media screen and (min-width: 1440px) {
+    background-color: $first-additional-bg-color;
+  }
+  width: 2px;
+  height: 7px;
+  transition: transform $cubic, opacity  $cubic;
+  opacity: 1;
+  }
+
+.circle__ray--hidden {
+  opacity: 0;
+}
+
+
+.circle__ray:nth-child(3):not(.circle__ray--hidden)  {
+  transform: translate(-50%, calc(-50% - 13px));
+}
+
+.circle__ray:nth-child(6):not(.circle__ray--hidden)  {
+  transform: translate(-50%, calc(-50% + 13px));
+}
+
+.circle__ray:nth-child(5):not(.circle__ray--hidden)  {
+  transform: translate(calc(-50% + 13px), -50%) rotate(90deg);
+}
+
+.circle__ray:nth-child(9):not(.circle__ray--hidden)  {
+  transform: translate(calc(-50% - 13px), -50%) rotate(90deg);
+}
+
+.circle__ray:nth-child(4):not(.circle__ray--hidden)  {
+  transform: translate(calc(-50% + 9px), calc(-50% - 9px)) rotate(45deg);
+}
+
+.circle__ray:nth-child(10):not(.circle__ray--hidden)  {
+  transform: translate(calc(-50% - 9px), calc(-50% - 9px)) rotate(-45deg);
+}
+
+.circle__ray:nth-child(8):not(.circle__ray--hidden)  {
+  transform: translate(calc(-50% - 9px), calc(-50% + 9px)) rotate(45deg);
+}
+.circle__ray:nth-child(7):not(.circle__ray--hidden) {
+  transform: translate(calc(-50% + 9px), calc(-50% + 9px)) rotate(-45deg);
+}
+
+
+
+
+.circle__ray:nth-child(3).circle__ray--hidden,
+.circle__ray:nth-child(6).circle__ray--hidden {
+  transform: translate(-50%, -50% );
+}
+
+
+
+.circle__ray:nth-child(5).circle__ray--hidden,
+.circle__ray:nth-child(9).circle__ray--hidden {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+
+.circle__ray:nth-child(4).circle__ray--hidden,
+.circle__ray:nth-child(8).circle__ray--hidden {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.circle__ray:nth-child(10).circle__ray--hidden ,
+.circle__ray:nth-child(7).circle__ray--hidden{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+

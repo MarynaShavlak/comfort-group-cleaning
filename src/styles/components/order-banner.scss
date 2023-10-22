@@ -1,0 +1,168 @@
+.order__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-order__banner {
+  position: relative;
+  background-image: url('../images/banner/pail@1x.png');
+  background-position: right 20px top 125px;
+  background-size: 80px 100px;
+  @media screen and (min-width: 768px) {
+      padding: 60px 90px;
+    }
+  
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/banner/pail@2x.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-position: left 0px top, right 13px bottom;
+    background-size: 226px 315px, 126px 343px;
+      background-image: url('../images/banner/tablet/girl_tablet@1x.png'), url('../images/banner/tablet/boy_tablet@1x.png');
+    
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/banner/tablet/girl_tablet@2x.png'),
+          url('../images/banner/tablet/boy_tablet@2x.png');
+         
+      }
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-size: contain;
+    background-position: left 29px top, right 60px top;
+    background-image: url('../images/banner/desktop/girl_desktop@1x.png'), url('../images/banner/desktop/boy_desktop@1x.png') ;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/banner/desktop/girl_desktop@2x.png'),
+        url('../images/banner/desktop/boy_desktop@2x.png');
+    }
+  }
+
+  background-repeat: no-repeat;
+  
+}
+
+.office-order__banner, .home-order__banner {
+  
+  @media screen and (max-width: 767px) {
+    padding: 32px 16px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 60px 212px;
+  }
+}
+
+
+
+.office-order__banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-image: url('../images/calculator/star1@1x.png'),
+    url('../images/calculator/star2@1x.png');
+
+  @media screen and (min-width: 768px) {
+    padding: 60px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 60px 212px;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-size: 60px 60px, 70px 70px;
+    background-position: right 16px bottom 80px, left top 67px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/calculator/star1@2x.png'),
+      url('../images/calculator/star2@2x.png'),
+      url('../images/calculator/star3@2x.png'),
+      url('../images/calculator/calc@2x.png');
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    background-size: 35px 35px, 69px 69px, 69px 69px, 250px 250px;
+    background-position: left 41px top 33px,
+      left 57px bottom 21px,
+      right 10px top 9px,
+      right -50px bottom -50px;
+    background-image: url('../images/calculator/star1@1x.png'),
+      url('../images/calculator/star2@1x.png'),
+      url('../images/calculator/star3@1x.png'),
+      url('../images/calculator/calc@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/calculator/star1@2x.png'),
+        url('../images/calculator/star2@2x.png'),
+        url('../images/calculator/star3@2x.png'),
+        url('../images/calculator/calc@2x.png');
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    background-size: 49px 49px, 98px 98px, 50px 50px, 85px 85px, 250px 250px;
+    background-position: left 43px top 48px,
+      left 134px bottom 42px,
+      right 123px top 23px,
+      right 35px bottom;
+    background-image: url('../images/calculator/star1@1x.png'),
+      url('../images/calculator/star2@1x.png'),
+      url('../images/calculator/star3@1x.png'),
+      url('../images/calculator/star4@1x.png'),
+      url('../images/calculator/calc@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/calculator/star1@2x.png'),
+        url('../images/calculator/star2@2x.png'),
+        url('../images/calculator/star3@2x.png'),
+        url('../images/calculator/star4@2x.png'),
+        url('../images/calculator/calc@2x.png');
+    }
+  }
+}
+
+ .info-block__title--order {
+  max-width: 303px;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 510px;
+    margin-bottom: 56px;
+
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 737px;
+    margin-bottom: 36px;
+  }
+
+
+}
+
+.office-order__banner .info-block__title--order {
+  margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+        max-width: 570px;
+        
+      }
+    @media screen and (min-width: 1440px) {
+        max-width: 737px;
+
+      }
+}

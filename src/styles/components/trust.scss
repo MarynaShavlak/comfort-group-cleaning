@@ -1,0 +1,160 @@
+.section--trust {
+  @media screen and (min-width: 1440px) {
+    padding-top: 110px;
+    padding-bottom: 122px;
+  }
+}
+
+
+.trust__container {
+    position: relative;
+    @media screen and (min-width: 1440px) {
+      padding-top: 116px;
+      padding-bottom: 116px;
+    }
+}
+
+
+
+
+
+.trust__container::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  top:916px;
+  right: -11px;
+  width: 107px;
+  height: 107px;
+  background-image: url('../images/trust/washcloth_tablet@1x.png');
+  @supports (background-image: url('../images/trust/washcloth_tablet@1x.webp')) {
+    background-image: url(../images/trust/washcloth_tablet@1x.webp);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/trust/washcloth_tablet@2x.png');
+      background-size: contain;
+      @supports (background-image: url('../images/trust/washcloth_tablet@2x.webp')) {
+        background-image: url(../images/trust/washcloth_tablet@2x.webp);
+      }
+    }
+
+  @media screen and (min-width: 768px) {
+    top: 496px;
+    right: -6px;
+    background-size: contain;
+  }
+  @media screen and (min-width: 1440px) {
+    top: 492px;
+    right: -11px;
+    width: 140px;
+    height: 140px;
+    background-image: url('../images/trust/washcloth@1x.png');
+    @supports (background-image: url('../images/trust/washcloth@1x.webp')) {
+      background-image: url(../images/trust/washcloth@1x.webp);
+    }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../images/trust/washcloth@2x.png');
+        @supports (background-image: url('../images/trust/washcloth@2x.webp')) {
+          background-image: url(../images/trust/washcloth@2x.webp);
+        }
+    }
+  }
+}
+
+.trust__container::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom:120px;
+  left:-6px;
+  width: 110px;
+  height: 110px;
+  background-image: url('../images/trust/brush__mobile@1x.png');
+  @supports (background-image: url('../images/trust/brush__mobile@1x.webp')) {
+    background-image: url(../images/trust/brush__mobile@1x.webp);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/trust/brush__mobile@2x.png');
+    @supports (background-image: url('../images/trust/brush__mobile@2x.webp')) {
+      background-image: url(../images/trust/brush__mobile@2x.webp);
+    }
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 768px) {
+   bottom: 80px;
+   left:0;
+    width: 134px;
+    height: 134px;
+    background-image: url('../images/trust/brush_tablet@1x.png');
+    @supports (background-image: url('../images/trust/brush_tablet@1x.webp')) {
+      background-image: url(../images/trust/brush_tablet@1x.webp);
+    }
+    
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/trust/brush_tablet@2x.png');
+        background-size: contain;
+        @supports (background-image: url('../images/trust/brush_tablet@2x.webp')) {
+          background-image: url(../images/trust/brush_tablet@2x.webp);
+        }
+      }
+      }
+
+
+
+  @media screen and (min-width: 1440px) {
+    bottom:143px;
+    width: 157px;
+    height: 157px;
+    background-image: url('../images/trust/brush@1x.png');
+    @supports (background-image: url('../images/trust/brush@1x.webp')) {
+      background-image: url(../images/trust/brush@1x.webp);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/trust/brush@2x.png');
+      @supports (background-image: url('../images/trust/brush@2x.webp')) {
+        background-image: url(../images/trust/brush@2x.webp);
+      }
+    }
+  }
+}
+
+
+.block-wrapper--trust {
+  gap: 32px;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 40px;
+    margin-bottom: 64px;
+  }
+}
+
+.block--zIndex {
+  z-index: 2;
+}
+
+.block--trust {
+  @media screen and (max-width: 1439px) {
+    min-height: 379px;
+  }
+}

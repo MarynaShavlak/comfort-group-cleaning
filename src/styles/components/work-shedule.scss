@@ -1,0 +1,111 @@
+.shedule-wrap {
+  display: flex;
+  @media screen and (max-width: 767px) {
+     flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    }
+  gap: 50px;
+}
+
+
+
+
+.work-shedule {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+    text-align: center;
+    width:200px;
+    margin-top: 8px;
+    padding: 15px;
+
+}
+
+.work-shedule__title {
+font-family: 'Montserrat',
+    sans-serif;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.23;
+  }
+}
+
+.work-shedule__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+  
+}
+.work-shedule__item {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.days-list {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding-right: 15px;
+  border-right: 2px solid $main-accent-color;
+}
+
+
+.days-list__item {
+  color: $primary-white-color;
+  background-color: $light-accent-color;
+  padding:5px 10px;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.38;
+    
+      @media screen and (min-width: 1440px) {
+        font-size: 14px;
+        line-height: 1.39;
+      }
+}
+
+.days-list__item--accent {
+  background-color: $main-accent-color;
+}
+
+.work-shedule__text {
+  
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: $main-accent-color;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.38;
+  @media screen and (min-width: 1440px) {
+      font-size: 30px;
+      line-height: 1.39;
+    }
+    
+}
+
+.work-shedule__text {
+    position: relative;
+}
+ .work-shedule__text--above {
+   position: absolute;
+   font-size: 14px;
+    margin-left: 3px;
+   @media screen and (min-width: 1440px) {
+     font-size: 18px;
+   }
+ }
+ .work-shedule__text--space {
+  margin-left: 10px;
+ }

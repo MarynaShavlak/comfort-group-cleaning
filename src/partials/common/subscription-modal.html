@@ -1,0 +1,71 @@
+<div class="backdrop backdrop--subscr backdrop--hidden" data-subscription-modal>
+  <div class="modal form--subscription">
+    <div class="subsc__wrapper">
+      <div class="subscr__title-wrapper">
+        <h3 class="subscr-modal__title">
+          Місячна підписка на клінінг для будинку чи квартири
+        </h3>
+        <span class="subscr__accent">399zł</span>
+      </div>
+      <ul class="info-block__list subscr-modal__list">
+        <li class="info-block__item text text--marked">
+          1 генеральне прибирання
+        </li>
+        <li class="info-block__item text text--marked">
+          1 підтримуюче прибирання
+        </li>
+      </ul>
+      <p class="text text--accent subscr__text-accent">
+        Хімчистка стільців, диванів, матраців, подушок та крісел раз у 6 місяців
+        у
+        <span>подарунок</span>!
+      </p>
+    </div>
+    <h4 class="form-title">Ваші дані</h4>
+    <form class="subscr__form form" method="POST">
+      @@include('user-order-data.html')
+
+      <div class="animated-btn-wrap">
+        <button
+          type="submit"
+          class="form__submit-btn action-btn btn modal-btn blob-btn"
+          aria-label="відправити заповнену форму замовлення"
+        >
+          Оплатити 399zł
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button>
+        <svg class="animated-btn-icon">
+          <defs>
+            <filter id="goo-12" x="0%" y="0%" width="100%" height="100%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                result="blur"
+                stdDeviation="10"
+              ></feGaussianBlur>
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                result="goo"
+              ></feColorMatrix>
+              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </form>
+
+    <button class="close-modal-btn" type="button" data-subscription-modal-close aria-label="Закрити модальне вікно із формою замовлення клінінгу">
+      <svg class="close-modal-icon">
+        <use href="../images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>

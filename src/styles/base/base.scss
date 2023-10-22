@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: $primary-black-color;
+  overflow-x: hidden;
+  &.support-modal-open, 
+  &.subscription-modal-open  {
+      overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 112px;
+  background-color: $first-additional-bg-color;
+}
+
+
+.active-dark-theme main {
+  background-color: $dark-add-color;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+button {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+

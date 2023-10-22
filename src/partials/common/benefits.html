@@ -1,0 +1,79 @@
+<section class="section section--dark-background section--benefits">
+  <div class="container container--flex">
+    <h2 class="section__title visually-hidden">Переваги</h2>
+    <ul class="features features--cleaning">
+      <li class="features__item features__item--cleaning">
+        <div class="features__image-wrap">
+          @@include('benefits-pictures/technic-picture.html')
+        </div>
+        <h3 class="features__title">Техніка KARCHER</h3>
+        <p class="features__desc">
+          <span>KARCHER</span> — це професійна техніка, що забезпечує ретельне
+          та якісне прибирання. Весь інвентар та техніки наші клінери приносять
+          з собою!
+        </p>
+      </li>
+      <li class="features__item features__item--cleaning">
+        <div class="features__image-wrap">
+          @@include('benefits-pictures/alergic-picture.html')
+        </div>
+        <h3 class="features__title">Гіпоалергенні миючі засоби</h3>
+        <p class="features__desc">
+          У прибиранні ми використовуємо лише якісну та не агресивну хімію
+          <span>KIEHL</span> та <span>Pomoc Domowa</span>. Наші миючі засоби не
+          мають різких запахів та гіпоалергенні
+        </p>
+      </li>
+
+      <li class="features__item features__item--cleaning">
+        <div class="features__icon-wrap">
+          <div class="features__image-wrap">
+            @@include('benefits-pictures/quality-picture.html')
+          </div>
+        </div>
+
+        <h3 class="features__title">Досвідчений персонал</h3>
+        <p class="features__desc">
+          Всі наші клінери спеціально підготовленні та
+          <span>пройшли навчання</span> від нашої компанії. Ми збираємо відгуки
+          про кожного працівника та
+          <span>контролюємо їх роботу.</span>
+        </p>
+      </li>
+    </ul>
+    <div class="animated-btn-wrap">
+      <a
+        href="#"
+        class="dynamic-link btn action-btn order-btn btn--centered blob-btn"
+      >
+        Замовити прибирання
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </a>
+      <svg class="animated-btn-icon">
+        <defs>
+          <filter id="goo-6" x="0%" y="0%" width="100%" height="100%">
+            <feGaussianBlur
+              in="SourceGraphic"
+              result="blur"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+              result="goo"
+            ></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>

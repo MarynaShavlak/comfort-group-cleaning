@@ -1,0 +1,192 @@
+.section {
+  background-color: $primary-white-color;
+    transition: background-color $cubic;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 116px;
+    padding-bottom: 116px;
+  }
+}
+
+.section--cleaning-types, .reviews, .section--buildings, .section--repair {
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+  position: relative;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+   @media screen and (min-width: 768px) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+  }
+  @media screen and (min-width: 1440px) {
+      padding-top: 66px;
+      padding-bottom: 66px;
+      border-bottom: 50px solid transparent;
+      border-top: 50px solid transparent;
+  }
+}
+
+
+.section--cleaning-types::before, .reviews::before, .section--buildings::before, .section--repair::before{
+  content: "";
+  position: absolute;
+  width: 110%;
+  left: -50px;
+  background-image: linear-gradient(to right, white, white,white);
+  filter: blur(10px);
+  z-index: 2;
+    top: -50px;
+    height: 40px;
+  @media screen and (min-width: 1440px) {
+    top: -70px;
+    height: 50px;
+  }
+}
+
+.active-dark-theme .section--cleaning-types::before,
+.active-dark-theme .reviews::before, 
+.active-dark-theme .section--cleaning-types::after,
+.active-dark-theme .reviews::after,
+.active-dark-theme .section--buildings::before, 
+.active-dark-theme .section--buildings::after, 
+.active-dark-theme .section--repair::before, 
+.active-dark-theme .section--repair::after {
+    background-image: linear-gradient(to right, $dark-add-4-color, $dark-add-4-color, $dark-add-4-color);
+}
+
+
+.section--cleaning-types::after, .reviews::after, .section--buildings::after, .section--repair::after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  width: 110%;
+
+  background-image: linear-gradient(to right, white, white,white);
+  filter: blur(10px);
+  z-index: 2;
+   bottom: -50px;
+  height: 40px;
+    @media screen and (min-width: 1440px) {
+      bottom: -70px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+
+.active-dark-theme  .section {
+  background-color: $dark-add-4-color;
+}
+
+
+.section--dark-background {
+  background-color: $first-additional-bg-color;
+  transition: background-color $cubic;
+
+}
+
+.active-dark-theme .section--dark-background {
+background-color: $dark-add-color;
+}
+
+
+
+.section--benefits-expanded {
+  padding-top: 0;
+  @media screen and (min-width: 768px) {
+      padding-top: 0;
+  }
+@media screen and (min-width: 1440px) {
+    padding-top: 74px;
+  }
+}
+
+
+
+
+
+.section--benefits {
+  padding-top: 30px;
+    @media screen and (min-width: 768px) {
+      padding-top: 60px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding-top: 110px;
+    }
+}
+
+.section--calc-order-cost {
+  padding-bottom: 64px;
+  
+    @media screen and (min-width: 768px) {
+      padding-bottom: 100px;
+    }
+  
+  }
+
+.section--home-maintenance {
+  padding-top: 64px;
+    @media screen and (min-width: 768px) {
+      padding-top: 72px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding-top: 57px;
+    }
+}
+
+
+.section__title {
+
+text-align: center;
+font-weight: 700;
+margin-bottom: 8px;
+line-height: 1.21;
+@media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 1.22;
+  }
+@media screen and (min-width: 1440px) {
+    margin-bottom: 16px;
+    font-size: 46px;
+  }
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: $second-additional-bg-color;
+  transition: background-color $cubic;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    border-radius: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+.active-dark-theme .section__container {
+  background-color: $dark-add-3-color;
+}

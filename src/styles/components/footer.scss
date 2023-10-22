@@ -1,0 +1,265 @@
+.footer {
+  background-color: $first-additional-bg-color;
+  z-index: 3;
+}
+.footer.footer--calc-order {
+  background-color: $primary-white-color;
+}
+
+
+
+
+.active-dark-theme .footer {
+  background-color: $dark-add-color;
+}
+.active-dark-theme .footer.footer--calc-order {
+  background-color: $dark-add-4-color;
+}
+
+.footer__wrap {
+  background-color: $second-additional-bg-color;
+  transition: background-color;
+  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 32px;
+    padding-bottom: 12px;
+  
+    @media screen and (min-width: 768px) {
+      padding-top: 60px;
+      padding-bottom: 8px;
+    }
+  
+    @media screen and (min-width: 1440px) {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      padding-bottom: 16px;
+    }
+}
+.active-dark-theme .footer__wrap {
+background-color: $dark-theme;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  .footer__about-section {
+    order: 0;
+  }
+  .footer__services-section {
+    order: 2;
+  }
+  .footer__contacts-section {
+    order: 1;
+ }
+        
+ .footer__support-section {
+    order: 3;
+  }
+
+
+  @media screen and (min-width: 768px) {
+    row-gap: 40px;
+.footer__about-section {
+    order: 0;
+  }
+
+  .footer__services-section {
+    order: 1;
+  }
+
+  .footer__contacts-section {
+    order: 2;
+  }
+
+  .footer__support-section {
+    order: 3;
+  }
+
+  ;
+      
+        
+  }
+}
+
+.footer__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  margin-bottom: 16px;
+  color: $primary-black-color;
+  transition: color $cubic;
+@media screen and (min-width: 768px) {
+  font-size: 18px;
+  line-height: 1.39;
+}
+@media screen and (min-width: 1440px) {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+}
+
+.active-dark-theme .footer__title{
+  color: $primary-white-color;
+}
+.about, .services, .footer__contacts, .support {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 335px;
+}
+
+.footer__item {
+  color: $primary-black-color;
+  
+  transition: color $cubic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  
+  
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 1.38;
+    }
+  
+    @media screen and (min-width: 1440px) {
+      font-size: 18px;
+      line-height: 1.39;
+    }
+}
+
+.active-dark-theme .footer__item {
+  color: $first-additional-bg-color;
+}
+
+.footer__link {
+  cursor: pointer;
+  transition: color $cubic;
+  color: $primary-black-color;
+  &:hover, &:focus {
+    color: $main-accent-color;
+  }
+}
+
+.active-dark-theme .footer__link {
+color: $first-additional-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $card-hover-effect-color;
+  }
+}
+
+.contacts__link {
+  font-weight: 700;
+  color: $main-accent-color;
+  transition: color $cubic;
+}
+
+.active-dark-theme .contacts__link {
+  color: $card-hover-effect-color;
+}
+
+.footer__socials {
+  display:flex;
+  margin: 0;
+  gap: 14px;
+  @media screen and (min-width: 1440px) {
+    gap: 16px;
+  }
+}
+
+.socials__item--white-bg {
+   background-color: $primary-white-color;
+}
+
+
+.footer .socials__item {
+  border: 1px solid $first-additional-bg-color;
+}
+
+.active-dark-theme .footer .socials__link {
+  &:hover,
+      &:focus {
+        color: $first-additional-bg-color;
+        background-color: $dark-theme;
+  
+        .socials__icon {
+          fill: $first-additional-bg-color;
+        }
+      }
+}
+
+ .socials__icon--footer {
+  transition: fill $cubic;
+   @media screen and (min-width: 1440px) {
+     width: 42px;
+     height: 42px;
+   }
+ }
+
+.active-dark-theme .socials__icon--footer {
+  fill: $main-accent-color;
+
+}
+
+.footer__copyright {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 15px;
+  row-gap: 8px;
+  margin-top: 32px;
+
+   span {
+      order: 2;
+    }
+
+    a:nth-child(1) {
+      order: 0;
+    }
+
+    a:nth-child(2) {
+      order: 1;
+    }
+  
+  @media screen and (min-width: 768px) {
+      gap:40px;
+      margin-top: 56px;
+      span {
+        order: 0;
+      }
+        
+      a:nth-child(1) {
+        order: 1;
+      }
+        
+      a:nth-child(2) {
+        order: 2;
+      }
+  }
+  @media screen and (min-width: 1440px) {
+      gap:50px;
+      margin-top: 109px;
+  }
+}
+
+
+.copyright__text {
+  font-size: 11px;
+  line-height: 1.36;
+  font-weight: 400;
+  color: $secondary-text-color;
+ 
+@media screen and (min-width: 1440px) {
+    font-size: 12px;
+    line-height: 1.33;
+  }
+}
+
+.active-dark-theme .copyright__text  {
+  color:$first-additional-bg-color;
+}

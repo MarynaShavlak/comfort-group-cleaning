@@ -1,0 +1,126 @@
+.success-table th,
+.success-table td {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.4px;
+  text-align: left;
+  
+}
+
+.success-table {
+  border-radius: 20px;
+  border-collapse: collapse;
+  background-color: $time-picker-color;
+  
+}
+
+.success-order-info-table {
+  @media screen and (max-width: 767px) {
+    width: 335px;
+
+  }
+  @media screen and (max-width: 1439px) {
+    z-index: 2;
+    opacity: 0.8;
+  }
+
+    @media screen and (min-width: 1440px) {
+      width: 650px;
+    }
+  margin-top: 30px;
+  
+}
+.success-order__name {
+  padding-left: 15px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  border-right: 2px solid $primary-white-color;
+    @media screen and (max-width: 767px) {
+    width: 180px;
+  }
+    @media screen and (min-width: 768px) {
+      width: 200px;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 200px;
+    }
+  
+}
+.success-table .success-order--total {
+  font-size: 16px;
+}
+.success-order--total {
+  color: $primary-white-color;
+  background-color: $light-accent-color;
+}
+.success-order--total:first-child {
+  border-bottom-left-radius: 20px;
+}
+.success-order--total:nth-child(2) {
+  border-bottom-right-radius: 20px;
+}
+
+.success-order-services-table .success-order__name {
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+      width: 270px;
+    }
+}
+
+
+
+
+tr:not(:last-child) .success-order__name, tr:not(:last-child) .success-order__value , .success-order-services-table thead{
+  border-bottom: 2px solid $primary-white-color;
+}
+
+ .success-order__value {
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      border-left: 2px solid $primary-white-color;
+      @media screen and (min-width: 1440px) {
+          width: 450px;
+      }
+}
+
+.success-order-services-table {
+  @media screen and (max-width: 767px) {
+      margin-top: 30px;
+      z-index: 2;
+      opacity: 0.8;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    margin-top: 30px;
+      width: 450px;
+      z-index:2;
+      opacity: 0.8;
+      
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 650px;
+    width: 500px;
+    margin-left: 700px;
+   
+  }
+}
+.success-order-services-table .success-order__quantity {
+  text-align: center;
+  width: 20px;
+  
+  @media screen and (min-width: 1440px) {
+      width: 30px;
+  }
+}
+.success-order-services-table .success-order__cost {
+  text-align: center;
+  width: 20px;
+  @media screen and (min-width: 1440px) {
+      width: 30px;
+  }
+}

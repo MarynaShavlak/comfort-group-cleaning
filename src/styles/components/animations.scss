@@ -1,0 +1,200 @@
+.features__photo {
+  position: relative;
+}
+
+.features__photo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, $light-accent-color, transparent);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: glow 2s ease-in-out infinite;
+}
+
+
+
+@keyframes glow {
+  0%,
+    100% {
+      box-shadow: 0 0 10px 5px $light-accent-color;
+    }
+  
+    25% {
+      box-shadow: 0 0 15px 7.5px $main-accent-color;
+    }
+  
+    50% {
+      box-shadow: 0 0 20px 10px $main-accent-color;
+    }
+  
+    75% {
+      box-shadow: 0 0 15px 7.5px $main-accent-color;
+    }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.stars-animation__wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stars-animation__icons {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.stars-animation__icons:nth-child(2) {
+transform: rotate(180deg);
+}
+
+.sparkles path:nth-child(1) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 1.9s 0s infinite ease-in-out;
+}
+
+.sparkles path:nth-child(2) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 3s 0s infinite ease-in-out;
+}
+
+.sparkles path:nth-child(3) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 1.6s 0s infinite ease-in-out;
+}
+
+.sparkles path:nth-child(4) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 3.4s 0s infinite ease-in-out;
+}
+
+.sparkles path:nth-child(5) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 2.5s 0s infinite ease-in-out;
+}
+
+.sparkles path:nth-child(6) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 3.9s 0s infinite ease-in-out;
+}
+.sparkles path:nth-child(7) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 2.1s 0s infinite ease-in-out;
+}
+.sparkles path:nth-child(8) {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: sparkle 3.9s 0s infinite ease-in-out;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(-1, 0);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes color-cycle {
+  0% {
+    color: $main-accent-color;
+  }
+
+  25% {
+    color: $error-color;
+  }
+
+  50% {
+    color: $main-accent-color;
+  }
+  75% {
+    color: $error-color;
+  }
+
+  100% {
+    color: $main-accent-color;
+  }
+}
+
+@keyframes background-color-cycle {
+  0% {
+    background-color: $second-additional-bg-color;
+  }
+
+  25% {
+    background-color: $first-additional-bg-color;
+  }
+
+  50% {
+    background-color: $second-additional-bg-color;
+  }
+
+  75% {
+    background-color: $first-additional-bg-color;
+  }
+
+  100% {
+    background-color: $second-additional-bg-color;
+  }
+}
+
+@keyframes tiltShake {
+
+0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

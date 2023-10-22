@@ -1,0 +1,183 @@
+<section class="section section--dark-background section--calc-order-cost" >
+  <div class="container order-cleaning__container relative-positioned">
+    <h2 class="section__title title--office-calc">
+      Розрахунок вартості прибирання
+    </h2>
+    <div class="office-calc__wrap" id="office-calc-block">
+      <div class="form--subscription office-calc__block data-order">
+        <h3 class="form-title data-order__title">Вид приміщення</h4>
+        <ul class="buildings">
+          <li
+            class="buildings__element buildings__element--current"
+            id="building-1"
+            data-id="Офіс"
+            data-type="userBuildingType">
+            Офіс
+          </li>
+          <li class="buildings__element element--office-page" id="building-2" data-id="Магазин" data-type="userBuildingType">Магазин</li>
+          <li class="buildings__element element--office-page" id="building-3" data-id="Ресторан" data-type="userBuildingType">Ресторан</li>
+          <li class="buildings__element element--calculator-page" id="building-4" data-id="Після ремонту" data-type="userBuildingType">Після ремонту</li>
+        </ul>
+        <h3 class="form-title data-order__title">Оберіть площу приміщення</h4>
+        <div class="data-order__wrap wrap--square" data-id = "square">
+          <div class="data-order__quantity-block">
+            <button
+              type="button"
+              class="control-quantity-btn control-quantity-btn--minus" data-type="minus"
+              aria-label=" Зменшити кількість квадратних метрів"
+            >
+              <svg
+                class="icon--minus"
+                width="35"
+                height="35"
+                
+              >
+                <use href="../images/sprite.svg#icon-minus"></use>
+              </svg>
+            </button>
+            <span class="quantity-block__text quantity-block__value service-quantity" >
+              <span data-name="square" class="square-value">1</span> м²
+            </span>
+            <button type="button" class="control-quantity-btn control-quantity-btn--plus" data-type="plus" aria-label="Збільшити кількість квадратних метрів">
+              <svg
+                class="icon--plus"
+                width="35"
+                height="35"
+                
+              >
+                <use href="../images/sprite.svg#icon-plus"></use>
+              </svg>
+            </button>
+          </div>
+          <span class="data-order__text">2zł за м²</span>
+        </div>
+        <include src="./partials/common/additional-services-block.html"></include>
+        <h3 class="form-title data-order__title">Доставимо ключі</h4>
+        <ul class="data-order__btn-list">
+          <li>
+            <button
+              class="option-button btn btn--light key-btn"
+              type="button"
+              id="take-keys-btn"
+            >
+            <span>Забрати ключі перед прибиранням</span>
+           </button>
+          </li>
+          <li>
+            <button
+              class="option-button btn btn--light key-btn"
+              type="button"
+              id="give-keys-btn"
+            > 
+            <span> Доставити ключі після прибирання</span>
+            </button>
+          </li>
+        </ul>
+
+        <ul class="form__user-info list keys-address-block isHidden">
+          <li class="form__item keys-address-block__take-item isHidden">
+            <span class="form__wrap">
+            <input
+              class="form__input form__input--long-placeholder form__input--location"
+              type="text"
+              name="userLocation"
+              placeholder="Де забрати ключі?"
+              data-type = "userTakeKeyAddress"
+            />
+            <svg
+              class="form__icon icon form__icon--vertical-centered"
+              width="24"
+              height="24"
+            >
+              <use href="../images/sprite.svg#icon-location"></use>
+            </svg>
+            </span>
+          </li>
+          <li class="form__item keys-address-block__give-item isHidden">
+            <span class="form__wrap">
+              <input
+                class="form__input form__input--long-placeholder form__input--location"
+                type="text"
+                name="userLocation"
+                placeholder="Куди доставити ключі?"
+                data-type = "userGiveKeyAddress"
+              />
+              <svg
+                class="form__icon icon form__icon--vertical-centered"
+                width="24"
+                height="24"
+              >
+                <use href="../images/sprite.svg#icon-location"></use>
+              </svg>
+            </span>
+          </li>
+        </ul>
+        
+
+<h3 class="form-title">Ваші дані</h4>
+    <form class="subscr__form form" method="POST">
+      <include src="./partials/common/user-order-data.html"></include>
+    </form>
+
+      </div>
+      <div class="office-calc__block full-order-table">
+        <div class="table__header table__block">
+          <span>Послуга</span>
+          <span>Вартість</span>
+        </div>
+        <ul class="table__data">
+          <li class="table__item table__block">
+            <span>Площа: <span class="square-value square-value-total">1</span> м²</span>
+            <span class="service-value" data-service="square">2zł</span> 
+          </li>
+        </ul>
+        <div class="table__sum table__block">
+          <span>Вартість</span>
+          <span class="total-order-value">2zł</span>
+        </div>
+       
+        <div class="animated-btn-wrap">
+            <button
+              type="submit"
+              class=" action-btn btn calc-btn blob-btn"
+            >
+              Замовити прибирання
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+ 
+            <svg class="animated-btn-icon">
+              <defs>
+                <filter id="goo-8" x="0%" y="0%" width="100%" height="100%">
+                  <feGaussianBlur
+                    in="SourceGraphic"
+                    result="blur"
+                    stdDeviation="10"
+                  ></feGaussianBlur>
+                  <feColorMatrix
+                    in="blur"
+                    type="matrix"
+                    values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                    result="goo"
+                  ></feColorMatrix>
+                  <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+      </div>
+      <div class="discount" id="office-calc-discount">
+        <span class="discount__value">-10%</span>
+        <span class="discount__text">на перше прибирання!</span>
+        <span class="discount__remark">
+          *вкажіть що це ваше перше замовлення у полі з коментарем
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

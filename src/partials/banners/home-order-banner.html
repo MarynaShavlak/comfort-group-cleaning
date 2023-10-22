@@ -1,0 +1,54 @@
+<section class="section section--dark-background no-padding-top home-order">
+  <div class="container order__container">
+    <div class="home-order__banner banner">
+      <h3
+        class="info-block__title title--white title--no-margin info-block__title--centered info-block__title--order"
+      >
+        Досить витрачати свій вільний час на прибирання! Замовляйте
+        <span>місячну підписку </span>на клінінг вашого дому!
+      </h3>
+      <div class="info-block info-block--second">
+        <p class="info-block__accent info-block__accent--light">399zł</p>
+        <p class="text text--secondary text--light">
+          1 генеральне прибирання + 1 підтримуюче прибирання
+        </p>
+
+        <div class="animated-btn-wrap">
+          <a
+            href="#order-cleaning-block"
+            class="btn--centered dynamic-link cleaning__btn btn blob-btn blob-btn--light blob-btn--white-border"
+          >
+            Замовити прибирання
+            <span class="blob-btn__inner blob-btn__inner--light">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob blob-btn__blob--light"></span>
+                <span class="blob-btn__blob blob-btn__blob--light"></span>
+                <span class="blob-btn__blob blob-btn__blob--light"></span>
+                <span class="blob-btn__blob blob-btn__blob--light"></span>
+              </span>
+            </span>
+          </a>
+          <svg class="animated-btn-icon">
+            <defs>
+              <filter id="goo-5" x="0%" y="0%" width="100%" height="100%">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  result="blur"
+                  stdDeviation="10"
+                ></feGaussianBlur>
+                <feColorMatrix
+                  in="blur"
+                  type="matrix"
+                  values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                  result="goo"
+                ></feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      @@include('../common/stars-svg.html')
+    </div>
+  </div>
+</section>

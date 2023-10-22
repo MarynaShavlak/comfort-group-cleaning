@@ -1,0 +1,199 @@
+.title--connection {
+  margin-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 25px;
+  }
+  
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 64px;
+  }
+}
+.connection__wrapper {
+  display: flex;
+  @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      gap:64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+  justify-content: space-between;
+}
+
+.connection__block-title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-size: 20px;
+  @media screen and (min-width: 1440px) {
+    line-height: 1.23;
+    font-size: 22px;
+  }
+}
+.connection__block-text {
+    line-height: 1.38;
+    font-size: 16px;
+  @media screen and (min-width: 1440px) {
+      line-height: 1.39;
+      font-size: 18px;
+    }
+}
+.connection--first-block {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1440px) {
+    padding-left: 100px;
+  }
+
+}
+
+
+ .connection__socials {
+  display: flex;
+  gap: 14px;
+   @media screen and (min-width: 1440px) {
+     display: flex;
+     gap:16px;
+   }
+ }
+
+ .socials__link--connection {
+  background-color: $second-additional-bg-color;
+ }
+
+
+ .connection--second-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-white-color;
+  transition: background-color $cubic,box-shadow $cubic;
+  border-radius: 20px;
+   padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 32px;
+    padding-bottom:32px;
+    @media screen and (max-width: 767px) {
+      width: 335px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      max-width: 420px;
+      padding-left:45px;
+      padding-right:45px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+    @media screen and (min-width: 1440px) {
+      max-width: 500px;
+      border-radius: 30px;
+      padding: 40px;
+    }
+  }
+
+.active-dark-theme .connection--second-block {
+  background-color:$first-additional-bg-color;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.connection--second-block.block-with-image::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 2;
+  background-position: center;
+  animation: tiltShake 0.5s infinite;
+  
+  @media screen and (max-width: 767px) { 
+    top: -110px;
+    right: 0;
+  }
+  
+  width: 133px;
+  height: 133px;
+  background-image: url('../images/contacts/mobile/phone@1x.png');
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url('../images/contacts/mobile/phone@2x.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 202px;
+    left: -90px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    
+    top:170px;
+    left:-122px;
+    width: 195px;
+    height: 195px;
+    background-image: url('../images/contacts/tablet/phone@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/contacts/tablet/phone@2x.png');
+    }
+  }
+}
+
+
+
+
+ .info-block__title--connection {
+  text-align: center;
+  margin-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+ }
+ .socials--support {
+  margin-top: 32px;
+  margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-top: 16px;
+    }
+ }
+
+.active-dark-theme .connection .socials__icon {
+  fill: $main-accent-color;
+}
+.active-dark-theme .connection {
+.socials__link {
+    &:hover,
+     &:focus {
+          background-color: $main-accent-color;
+          .socials__icon {
+              fill: $second-additional-bg-color;
+            }
+     }
+        
+    }
+} 
+
+
+
+ .tel--support {
+    color: $main-accent-color;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 16px;
+    line-height: 1.22;
+    font-size: 18px;
+    
+   @media screen and (min-width: 1440px) {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.35;
+      font-size: 20px;
+    }
+ }
+

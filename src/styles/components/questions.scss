@@ -1,0 +1,209 @@
+.title--questions {
+  margin-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 72px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 64px;
+  }
+}
+
+
+.questions__container {
+  @media screen and (min-width: 1440px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.questions__item {
+  border-bottom: 2px solid $main-accent-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+}
+
+.question__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.15;
+    transition: color $cubic;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+     line-height: 1.23;
+      font-size: 22px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      font-size: 24px;
+      line-height: 1.21;
+    }
+    &:hover, &:focus {
+      color: $main-accent-color;
+    }
+}
+
+
+.questions__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.38;
+
+    span {
+      color: $main-accent-color;
+    }
+    
+  
+   @media screen and (min-width: 1440px) {
+      font-size: 18px;
+      line-height: 1.39;
+    }
+    span {
+      font-weight: 700;
+    }
+}
+
+
+.questions__text:nth-child(2) {
+  margin-bottom: 16px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 12px;
+  }
+}
+
+.toggle-question-icon {
+  fill: $main-accent-color;
+  width: 23px;
+  height: 23px;
+  @media screen and (min-width: 768px){
+    width: 27px;
+    height: 27px;
+  }
+  @media screen and (min-width: 1440px){
+    width: 29px;
+    height: 29px;
+  }
+}
+
+
+
+.toggle-question-btn {
+  top:50%;
+  left:100%;
+  transform: translate(-100%,-50%);
+  
+}
+
+.plus-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+
+.toggle-question-btn .icon--minus {
+  fill: $main-accent-color;
+}
+
+.questions__wrap {
+  display: flex;
+  margin-top: 57px;
+  @media screen and (max-width: 767px) {
+     flex-direction: column;
+     gap: 24px;
+  }
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+  
+   
+}
+
+
+
+
+.questions-expanded__text {
+  max-width: 285px;
+  margin-left: 50px;
+  @media screen and (min-width: 768px) {
+    margin-left: 54px;
+    max-width: 396px;
+  }
+  
+    @media screen and (min-width: 1440px) {
+      margin-left: 72px;
+      max-width: 660px;
+    }
+}
+
+.container--questions-expanded {
+  background-repeat: no-repeat;
+  background-position: left -5px bottom 75px;
+    background-size:  95px 95px;
+    background-image:  url('../images/faq/question-sign-small@1x.png');
+  
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: 
+        url('../images/faq/question-sign-small@2x.png');
+    }
+  
+    @media screen and (min-width: 768px) {
+      background-position: right 30px top -24px, left 20px bottom -15px;
+      background-size: 137px 137px, 95px 95px;
+      background-image: url('../images/faq/question-sign-big@1x.png'), url('../images/faq/question-sign-small@1x.png');
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/faq/question-sign-big@1x.png'),
+            url('../images/faq/question-sign-small@2x.png');
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      background-position: right 0px top -24px, left 0 bottom -15px;
+      background-size: 137px 137px, 105px 105px;
+  
+}}
+
+.accordion {
+  width: 100%;
+  overflow: hidden;
+}
+
+.accordion__intro {
+  position: relative;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all $cubic;
+  opacity: 0;
+}
+
+
+  .accordion__active .accordion__content {
+      opacity: 1;
+      margin-top: 24px;
+    }
+     
+  
+       
+    

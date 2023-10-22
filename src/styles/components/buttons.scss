@@ -1,0 +1,447 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background-color: $main-accent-color;
+  color: $primary-white-color;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.33;
+  transition: color $cubic, background-color $cubic, border $cubic;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $main-accent-color;
+    background-color: $primary-white-color;
+    color: $main-accent-color;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
+}
+
+
+.btn--light {
+  border: 2px solid $main-accent-color;
+  background-color: $primary-white-color;
+  color: $main-accent-color;
+  transition: background-color $cubic;
+  &:hover,
+  &:focus {
+      background-color: $second-additional-bg-color;
+  }
+}
+
+.active-dark-theme .btn--light:not(.active) {
+  background-color: $first-additional-bg-color;
+  &:hover {
+      background-color: $dark-add-2-color;
+    }
+}
+
+.tel-btn {
+    transition: color $cubic, background-color $cubic, border $cubic;
+    line-height: 1.19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $main-accent-color;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 16px 24px;
+    background-color: transparent;
+    border: 2px solid $main-accent-color;
+  
+
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $main-accent-color;
+  }
+
+}
+
+.tel-btn--white-bg {
+  background-color:$primary-white-color;
+}
+.tel-btn--aside--menu {
+  border: 1px solid $main-accent-color;
+  @media screen and (max-width: 1439px) {
+    line-height: 1.38;
+  }
+padding: 17px 25px;
+  &:hover,
+  &:focus {
+    background-color: $light-accent-color;
+    border: 1px solid $primary-white-color;
+  }
+}
+
+.active-dark-theme .tel-btn:not(.tel-btn--aside--menu) {
+  color: $second-additional-bg-color;
+  border: 2px solid $second-additional-bg-color;
+  &:hover,
+    &:focus {
+      color: $main-accent-color;
+      background-color: $second-additional-bg-color;
+    }
+}
+.active-dark-theme .connection .tel-btn  {
+  color: $main-accent-color;
+      border: 2px solid $main-accent-color;
+}
+.action-btn {
+  width: fit-content;
+  padding: 15px 50px;
+
+  @media screen and (min-width: 768px) {
+    padding: 15px 23px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 17px 25px;
+  }
+}
+
+.cleaning__btn {
+  font-size: 16px;
+  line-height: 1.38;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+  padding: 15px 50px;
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    padding: 15px 23px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 17px 25px;
+    font-size: 18px;
+    line-height: 1.39;
+  }
+}
+
+.order-btn,
+.reviews__btn {
+
+  @media screen and (max-width: 1439px) {
+    padding: 15px 23px;
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+ 
+.btn--centered {
+  align-self: center;
+    margin: 0 auto;
+}
+
+
+
+
+.reviews__btn {
+  @media screen and (max-width: 767px) {
+    min-width: 277px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $second-additional-bg-color;
+  }
+}
+
+.connection__btn {
+  font-family: 'Inter', sans-serif;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 1440px) {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 32px;
+    margin-bottom: 13px;
+  }
+}
+
+.section--success .hero__btn,.section--error .hero__btn  {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 225px;
+  }
+}
+
+.key-btn {
+  background-image: url('../images/office-page/keys.png');
+  background-size: 50px 50px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 92px;
+  max-width: 312px;
+  text-align: left;
+  background-color: transparent;
+}
+    
+#take-keys-btn.active,
+#give-keys-btn.active,
+.payment__btn.active {
+  background-color: $main-accent-color;
+  color: $primary-white-color;
+}
+
+.calc-btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.office-order .calc-btn {
+  width: fit-content;
+  margin-top: 0;
+}
+
+ .card-payment-btn {
+   background-image: url('../images/subscr-modal/cards.png');
+   background-size: 65px 50px;
+   padding-top: 18px;
+   padding-bottom: 18px;
+   padding-left: 100px;
+   max-width: 312px;
+ }
+
+ .cash-payment-btn {
+   background-image: url('../images/subscr-modal/currency.png');
+   background-size: 61px 50px;
+   padding-top: 30.5px;
+   padding-bottom: 30.5px;
+   padding-left: 89px;
+
+   @media screen and (min-width: 768px) {
+     max-width: 200px;
+   }
+ }
+
+ .form__submit-btn {
+   @media screen and (max-width: 767px) {
+     width: 100%;
+   }
+
+   @media screen and (min-width: 768px) {
+     padding: 16px 84px;
+   }
+ }
+
+ .ask-btn {
+    margin-top: 48px;
+    
+      @media screen and (min-width: 768px) {
+        margin-top: 56px;
+      }
+    
+      @media screen and (min-width: 1440px) {
+        margin-top: 83px;
+      }
+ }
+
+ .time-picker__btn {
+  position:absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid $main-accent-color;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  color: $time-picker-tablo-color;
+  background-color: $time-picker-color;
+    cursor: pointer;
+    transition: color $cubic, background-color $cubic;
+  
+    &:hover {
+      color: $primary-white-color;
+      background-color: $main-accent-color;
+    }
+ }
+
+ .active-dark-theme .time-picker__btn {
+    background-color: $datepicker-color;
+ }
+
+.blob-btn {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  color: $primary-white-color;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid transparent;
+  transition: color 0.5s, border 0.5s;
+  cursor: pointer;
+}
+
+.blob-btn--light {
+  border: 2px solid $main-accent-color;
+  color: $main-accent-color;
+}
+
+
+
+.blob-btn:before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+
+.blob-btn:hover {
+  color: $main-accent-color;
+  border: 2px solid $main-accent-color;
+}
+.blob-btn:focus {
+  color: $primary-white-color;
+  background-color: $main-accent-color;
+}
+.blob-btn--light:hover {
+  color: $primary-white-color;
+  border: 2px solid $main-accent-color;
+}
+
+.blob-btn--white-border:hover {
+  border: 2px solid $second-additional-bg-color;
+}
+
+
+.blob-btn--light:focus {
+  color: $main-accent-color;
+  border: 2px solid $main-accent-color;
+}
+
+
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+}
+
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: $main-accent-color;
+}
+
+.blob-btn__inner--light {
+background-color: $second-additional-bg-color;
+}
+
+
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+@supports (filter: url('#goo')) {
+
+  [id^='goo'] {
+    filter: url('#goo');
+  }
+
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+
+
+
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: $primary-white-color;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+
+.blob-btn__blob--light {
+  background: $main-accent-color;
+}
+
+
+.blob-btn__blob:nth-child(1) {
+  left: 0;
+  transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+
+
+.animated-btn-wrap {
+  position: relative;
+}
+.animated-btn-icon {
+  position: absolute;
+  top:0;
+  left: 0;
+}
