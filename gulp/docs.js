@@ -69,7 +69,6 @@ gulp.task('images:docs', function() {
 	.pipe(newer('./docs/images/'))
   .pipe(webp())
   .pipe(gulp.dest('./docs/images/'))
-  
   .pipe(gulp.src('./src/images/**/*'))
   .pipe(changed('./docs/images/'))
 	.pipe(newer('./docs/images/'))
