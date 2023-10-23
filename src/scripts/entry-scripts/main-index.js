@@ -1,29 +1,16 @@
-// import '../modules/common.js';
-// import '../modules/aside-menu.js';
-// import '../modules/theme-toggler.js';
-// import '../modules/scroll-to-top.js';
-// import '../modules/rooms-slider.js';
-// import '../modules/toolkit.js';
-// import '../modules/questions.js';
-// import '../modules/modal.js';
-// import '../modules/support-modal.js';
-// import '../modules/subscr-modal.js';
-// import '../modules/calendar.js';
-// import '../modules/time-picker.js';
-// import '../modules/location.js';
-// import '../modules/location-modal.js';
+import '../modules/common.js';
+import '../modules/aside-menu.js';
+import '../modules/theme-toggler.js';
+import '../modules/scroll-to-top.js';
 
-//= require ../modules/common.js
-//= require ../modules/aside-menu.js
+import '../modules/toolkit.js';
+import '../modules/questions.js';
+import '../modules/modal.js';
+import '../modules/support-modal.js';
+import '../modules/subscr-modal.js';
+import '../modules/calendar.js';
+import '../modules/time-picker.js';
+import '../modules/location.js';
+import '../modules/location-modal.js';
 
-//= require ../modules/scroll-to-top.js
-//= require ../modules/rooms-slider.js
-//= require ../modules/toolkit.js
-//= require ../modules/questions.js
-//= require ../modules/modal.js
-//= require ../modules/support-modal.js
-//= require ../modules/subscr-modal.js
-//= require ../modules/calendar.js
-//= require ../modules/time-picker.js
-//= require ../modules/location.js
-//= require ../modules/location-modal.js
+

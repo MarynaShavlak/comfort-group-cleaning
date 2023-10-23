@@ -1,3 +1,4 @@
+import $ from "jquery";
 $(function() {
   const toggleAnswerBtnList = $('.toggle-question-btn');
   const accordionsList = $('.accordion');

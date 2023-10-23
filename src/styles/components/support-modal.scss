@@ -29,37 +29,7 @@
   transition: opacity $cubic, visibility $cubic;
 }
 
-.modal {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-      border-radius: 30px;
-        background-color: $primary-white-color;
-        transform: scale(1);
-        transition: transform $cubic, background-color $cubic;;
-        width: 335px;
-      
-        .backdrop--hidden & {
-          transform: scale(0.8);
-        }
-      
-        @media screen and (min-width: 768px) {
-          transform: scale(1);
-          width: 480px;
-          .backdrop--hidden & {
-            transform: scale(0.8);
-          }
-}
 
-
-
-
-  @media screen and (min-width: 1440px) {
-    min-height: 581px;
-    gap: 24px;
-  }
-}
 
 
 .active-dark-theme .modal {

@@ -12,10 +12,10 @@ const paymentErrorMessage = document.querySelector('.form__payment-error-text');
 const formInputList = document.querySelectorAll('.form__input');
 const makeOrderBtn = document.querySelector('.calc-btn');
 const policyCheckBox = document.querySelector('[name="studio-policy-check"]');
+let observer;
 
 if (policyCheckBox) {
-  const observer = new MutationObserver((mutationsList, observer) => {
-    console.log('mutationsList: ', mutationsList);
+  observer = new MutationObserver((mutationsList, observer) => {
     mutationsList.forEach(mutation => {
       if (
         mutation.type === 'attributes' &&
@@ -129,7 +129,6 @@ function checkIfPaymentTypeChosen() {
 function checkIfPolicyAgreed() {
   const policyCheckBox = document.querySelector('[name="studio-policy-check"]');
   const isAgreed = policyCheckBox.checked;
-  console.log('isAgreed: ', isAgreed);
   return isAgreed;
 }
 
@@ -178,7 +177,7 @@ function onSubmitForm(e) {
     togglePaymentTypeErrorVisibility();
   }
   togglePolicyErrorVisibility();
-
+  const isPolicyAgreed = checkIfPolicyAgreed();
   if (!isPaymentTypeChosen || isAnyError || !isPolicyAgreed) {
     return;
   }
@@ -195,7 +194,7 @@ function onSubmitForm(e) {
     toggleModal(refsSubscr);
   }
   window.location.href = window.location.href =
-    'https://marynashavlak.github.io/cleaning/success-order.html';
+    'https://marynashavlak.github.io/comfort-group-cleaning/success-order.html';
 }
 
 function initializeComplexOrder() {

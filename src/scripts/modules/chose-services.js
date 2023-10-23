@@ -1,4 +1,5 @@
-import { userOrderData, setPropertyInOrderObj } from './user-order-form';
+// import { userOrderData, setPropertyInOrderObj } from './user-order-form';
+import {setPropertyInOrderObj } from './user-order-form';
 const buildingsBtnList = document.querySelectorAll('.buildings__element');
 const increaseSquareBtn = document.querySelector('.control-quantity-btn--plus');
 const decreaseSquareBtn = document.querySelector(

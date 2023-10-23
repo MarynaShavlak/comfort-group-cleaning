@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore frequently asked questions about our cleaning services at Cleaning Company. Get answers to common queries, tips, and advice to make informed decisions about your cleaning needs. Contact us for more information and expert cleaning solutions."
+      />
+    
+    <title>Cleaning company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
+  </head>
+  <body>
+    @@include('../partials/common/header.html')
+    <main>
+      @@include('../partials/faq/questions-expanded.html')
+    </main>
+    @@include('../partials/common/footer.html')
+    @@include('../partials/common/location-modal.html')
+    @@include('../partials/common/support-modal.html')
+    @@include('../partials/common/scroll-to-top.html')
+
+    <script src="./js/faq.bundle.js"></script>
+  </body>
+</html>

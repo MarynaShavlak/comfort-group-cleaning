@@ -17,12 +17,12 @@ const flexBasisOneThird = 'calc(100% / 3)';
 const flexBasisHalf = 'calc(100% / 2)';
 
 const pages = {
-  home: ['/cleaning/', '/cleaning/index.html'], 
-  office: ['/cleaning/office.html'],
-  afterRepair: ['/cleaning/after-repair.html'],
-  calcOrder: ['/cleaning/calc-order.html'], 
-  contacts: ['/cleaning/contacts.html'],
-  successOr404: ['/cleaning/success-order.html', '/cleaning/404.html'],
+  home: ['/comfort-group-cleaning/', '/comfort-group-cleaning/index.html'], 
+  office: ['/comfort-group-cleaning/office.html'],
+  afterRepair: ['/comfort-group-cleaning/after-repair.html'],
+  calcOrder: ['/comfort-group-cleaning/calc-order.html'], 
+  contacts: ['/comfort-group-cleaning/contacts.html'],
+  successOr404: ['/comfort-group-cleaning/success-order.html', '/comfort-group-cleaning/404.html'],
 };
 
 const pageActions = {
