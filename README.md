@@ -34,7 +34,7 @@ project, can be viewed
 ## :rocket: Get Started
 
 To get started with Comfort Group,
-[visit our website](https://marynashavlak.github.io/cleaning/).
+[visit our website](https://marynashavlak.github.io/comfort-group-cleaning/).
 
 ## :computer: Technologies
 
