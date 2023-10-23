@@ -1,6 +1,5 @@
 import '../modules/common.js';
-//=include ../modules/aside-menu.js
-
+import '../modules/aside-menu.js';
 import '../modules/theme-toggler.js';
 import '../modules/scroll-to-top.js';
 import '../modules/questions.js';
