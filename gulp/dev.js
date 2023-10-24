@@ -12,6 +12,7 @@ const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const newer =  require('gulp-newer');
+const webp = require('gulp-webp');
 const connect = require('gulp-connect');
 const fileIncludeSetting = {
 	prefix: '@@',
@@ -54,9 +55,22 @@ gulp.task('images:dev', function() {
 	return gulp.src('./src/images/**/*')
 	.pipe(changed('./build/images/'))
 	.pipe(newer('./build/images/'))
+	// // .pipe(imagemin({verbose:true}))
+	// .pipe(gulp.dest('./build/images/'))
+	// .pipe(connect.reload())
+
+	.pipe(webp())
+  .pipe(gulp.dest('./build/images/'))
+  .pipe(gulp.src('./src/images/**/*'))
+  .pipe(changed('./build/images/'))
+	.pipe(newer('./build/images/'))
 	// .pipe(imagemin({verbose:true}))
 	.pipe(gulp.dest('./build/images/'))
 	.pipe(connect.reload())
+
+
+
+
 })
 
 gulp.task('files:dev', function() {

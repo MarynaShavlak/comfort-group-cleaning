@@ -24,10 +24,6 @@
 
 
 
-
-
-
-
 .block {
   display:flex;
   flex-direction: column;
@@ -124,7 +120,8 @@ text-align: justify;
 
 
 
-.rooms-toggle {
+.swiper-pagination {
+  position: static;
   display: flex;
   align-items: center;
   padding: 6px;
@@ -142,7 +139,14 @@ text-align: justify;
 
 }
 
-.rooms__item {
+
+
+.swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:auto;
+  height:auto;
   flex-basis: calc(100% / 3);
   text-align: center;
   padding-top: 16px;
@@ -151,7 +155,9 @@ text-align: justify;
   font-size: 16px;
   line-height: 1.38;
   font-weight: 600;
+  opacity:1;
   cursor: pointer;
+  background-color: transparent;
   color: $primary-black-color;
   transition: color $cubic, background-color $cubic;
   @media screen and (min-width: 768px) {
@@ -165,16 +171,22 @@ text-align: justify;
       
   }
 
-  &.rooms__item--current {
+  &.swiper-pagination-bullet-active {
     background-color: $main-accent-color;
     color: $primary-white-color;
   }
 
-  &:not(.nav__link--current):hover {
+  &:not(.swiper-pagination-bullet-active):hover {
     background-color: $main-accent-color;
     color: $primary-white-color;
     
   }
+
+  
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin:0;
 }
 
 

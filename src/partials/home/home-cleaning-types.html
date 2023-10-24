@@ -2,174 +2,169 @@
   <div class="container">
     <h2 class="section__title title">Що входить в прибирання?</h2>
     @@include('../common/month-subscr-types.html')
-    <div class="rooms__wrapper">
-      <ul class="rooms-toggle">
-        <li class="rooms__item  rooms__item--current right"  id="room-1" >Кухня</li>
-        <li class="rooms__item left" id="room-2">Кімнати</li>
-        <li class="rooms__item " id="room-3">Санвузол</li>
-    </ul>
-    <div class="slider__wrap ">
-      
-      <div class="rooms__schema schema--kitchen rooms__schema--current">
-        @@include('pictures/kitchen-picture.html')
-      <div class="toolkit__wrapper wrapper--first">
-        <span class="toolkit__desc">Миємо підлогу</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--second">
-        <span class="toolkit__desc">Протираємо плитку </span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--third">
-        <span class="toolkit__desc toolkit__desc--reverse">Миємо раковину та плиту</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fourth">
-        <span class="toolkit__desc">Миємо техніку</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fifth">
-        <span class="toolkit__desc">Протираємо підвіконня, батареї, плінтуси, двері та вимикачі!</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      </div>
-      <div class="rooms__schema schema--room rooms__schema--next">
-        @@include('pictures/room-picture.html')
+    <div class="swiper">
+      <ul class="swiper-pagination">
+      </ul>
+      <div class="swiper-container ">
+        <div class="swiper-wrapper ">
+            <div class="swiper-slide schema--kitchen ">
+                @@include('pictures/kitchen-picture.html')
+                
+              <div class="toolkit__wrapper wrapper--first">
+                <span class="toolkit__desc">Миємо підлогу</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--second">
+                <span class="toolkit__desc">Протираємо плитку </span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--third">
+                <span class="toolkit__desc toolkit__desc--reverse">Миємо раковину та плиту</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--fourth">
+                <span class="toolkit__desc">Миємо техніку</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--fifth">
+                <span class="toolkit__desc">Протираємо підвіконня, батареї, плінтуси, двері та вимикачі!</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide  schema--room ">
+              @@include('pictures/room-picture.html')
 
-      <div class="toolkit__wrapper wrapper--first">
-        <span class="toolkit__desc">Пилососимо та миємо підлогу</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--second">
-        <span class="toolkit__desc">Хімчистка диванів, матраців, подушок, стільців та крісел</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--third">
-        <span class="toolkit__desc toolkit__desc--reverse">Витираємо пил з усіх відкритих і закритих поверхонь</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fourth">
-        <span class="toolkit__desc">Прибираємо та вивозимо сміття</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fifth">
-        <span class="toolkit__desc">Миємо вікна, підвіконня, батареї, плінтуса, вимикачі, дверні ручки, люстри</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--sixth">
-        <span class="toolkit__desc">Розставляємо взуття та пакуємо ваші речі</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--seventh">
-        <span class="toolkit__desc">Застеляємо ліжка і міняємо постільну білизну</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      </div>
-      <div class="rooms__schema schema--bath rooms__schema--prev">
-        @@include('pictures/bath-picture.html')
-
-      <div class="toolkit__wrapper wrapper--first">
-        <span class="toolkit__desc">Миємо підлогу та плінтуса, пилососимо</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--second">
-        <span class="toolkit__desc">Чистимо та дезінфікуємо туалет</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--third">
-        <span class="toolkit__desc toolkit__desc--reverse">Очищаємо всі поверхні</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fourth">
-        <span class="toolkit__desc">Чистимо ванну, змішувачі та душ</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--fifth">
-        <span class="toolkit__desc">Миємо раковину</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-      <div class="toolkit__wrapper wrapper--sixth">
-        <span class="toolkit__desc">Чистимо дзеркала</span>
-        <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
-              <svg class="toolkit__icon " width="18" height="18" >
-                <use href="images/sprite.svg#icon-plus"></use>
-              </svg>
-        </button>
-      </div>
-
+            <div class="toolkit__wrapper wrapper--first">
+              <span class="toolkit__desc">Пилососимо та миємо підлогу</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--second">
+              <span class="toolkit__desc">Хімчистка диванів, матраців, подушок, стільців та крісел</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--third">
+              <span class="toolkit__desc toolkit__desc--reverse">Витираємо пил з усіх відкритих і закритих поверхонь</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--fourth">
+              <span class="toolkit__desc">Прибираємо та вивозимо сміття</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--fifth">
+              <span class="toolkit__desc">Миємо вікна, підвіконня, батареї, плінтуса, вимикачі, дверні ручки, люстри</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--sixth">
+              <span class="toolkit__desc">Розставляємо взуття та пакуємо ваші речі</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="toolkit__wrapper wrapper--seventh">
+              <span class="toolkit__desc">Застеляємо ліжка і міняємо постільну білизну</span>
+              <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                    <svg class="toolkit__icon " width="18" height="18" >
+                      <use href="images/sprite.svg#icon-plus"></use>
+                    </svg>
+              </button>
+            </div>
+            </div>
+            <div class="swiper-slide schema--bath ">
+                @@include('pictures/bath-picture.html')
+              <div class="toolkit__wrapper wrapper--first">
+                <span class="toolkit__desc">Миємо підлогу та плінтуса, пилососимо</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--second">
+                <span class="toolkit__desc">Чистимо та дезінфікуємо туалет</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--third">
+                <span class="toolkit__desc toolkit__desc--reverse">Очищаємо всі поверхні</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn--reverse"  aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--fourth">
+                <span class="toolkit__desc">Чистимо ванну, змішувачі та душ</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--fifth">
+                <span class="toolkit__desc">Миємо раковину</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+              <div class="toolkit__wrapper wrapper--sixth">
+                <span class="toolkit__desc">Чистимо дзеркала</span>
+                <button type="button" class="plus-btn plus-btn--toolkit toolkit__btn" aria-label="показати повідомлення про  вид робіт, що надається">
+                      <svg class="toolkit__icon " width="18" height="18" >
+                        <use href="images/sprite.svg#icon-plus"></use>
+                      </svg>
+                </button>
+              </div>
+            </div>  
+        </div>
       </div>
   </div>
     
-   
-
-    </div>
   </div>
 </section>

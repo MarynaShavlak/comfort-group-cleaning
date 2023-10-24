@@ -377,7 +377,7 @@ Optimizing images for Retina displays and using the WebP format is paramount for
      <td>Order Success Confirmation Page</td>
   </tr>
   <tr>
-    <td><img src='/src/images/screens/2.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/2.gif' width=400 alt="скріншот  cторінки сайту" ></td>
     <td><img src='/src/images/screens/12.gif' width=400 alt="скріншот  cторінки сайту" ></td>
   </tr>
     <td>Custom Calendar with Date Blocking</td>
