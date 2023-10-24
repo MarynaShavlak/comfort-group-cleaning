@@ -118,7 +118,22 @@ text-align: justify;
   }
 }
 
+.swiper {
+  border-radius: 20px;
+  @media screen and (min-width: 768px) {
+    border-radius: 30px;
+  }
+}
+.rooms__image, .swiper-slide {
+  border-radius: 20px;
+  @media screen and (min-width: 768px) {
+    border-radius: 30px;
+  }
+}
 
+.swiper-slide {
+overflow: hidden;
+}
 
 .swiper-pagination {
   position: static;

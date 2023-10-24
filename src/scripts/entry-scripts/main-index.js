@@ -5,6 +5,7 @@ import '../modules/scroll-to-top.js';
 
 import '../modules/toolkit.js';
 import '../modules/questions.js';
+import '../modules/reviews.js';
 import '../modules/modal.js';
 import '../modules/support-modal.js';
 import '../modules/subscr-modal.js';

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="main.css">
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <title>Slider</title>
+</head>
+<body>
+  <h1 class="title">Responsive Slider</h1>
+  <!-- <div class="slider">
+    <div class="slider__line">
+  </div>
+  <button class="btn btn--prev"><i class="fa-solid fa-angle-left"></i></button>
+<button class="btn btn--next"><i class="fa-solid fa-angle-right"></i></button>
+  </div> -->
+
+
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img alt="" src="img/01.jpg"/></div>
+      <div class="swiper-slide"><img alt="" src="img/02.jpg"/></div>
+      <div class="swiper-slide"><img alt="" src="img/03.jpg"/></div>
+      <div class="swiper-slide"><img alt="" src="img/04.jpg"/></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+  </div>
+
+<div class="inner">
+  <div class="gallery">
+    
+      <div class="swiper-wrapper">
+        <div class="swiper-slide photo-slide"><img alt="" src="img/01.jpg"/></div>
+        <div class="swiper-slide photo-slide"><img alt="" src="img/02.jpg"/></div>
+        <div class="swiper-slide photo-slide"><img alt="" src="img/03.jpg"/></div>
+        <div class="swiper-slide photo-slide"><img alt="" src="img/04.jpg"/></div>
+      </div>
+   
+  </div>
+      <div class="prev-btn">prev</div>
+      <div class="next-btn">next</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

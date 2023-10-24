@@ -21,7 +21,11 @@ function toggleToolkitDescVisibility(el) {
 
   const swiper = new Swiper(".swiper-container", {
     effect: "cube",
+    cubeEffect: {
+      slideShadows: false,
+    },
     speed: 1000,
+    autoHeight: true,
     grabCursor: true,
     pagination: {
       el: '.swiper-pagination',
@@ -33,6 +37,9 @@ function toggleToolkitDescVisibility(el) {
     },
     keyboard: {
       enabled: true,
+      onlyInViewport: true,
     },
-  
+    mousewheel: {
+      invert: true,
+    },
   });
