@@ -93,13 +93,13 @@ Before you begin, make sure you have:
 - Node.js and npm installed on your machine.
 
 ### Installation
-
   Clone the repository:
     ```
     git clone https://github.com/MarynaShavlak/comfort-group-cleaning
     cd comfort-group-cleaning
+    
     ```
-
+  
   Install project dependencies:
   ```bash
     npm install
