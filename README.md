@@ -94,10 +94,9 @@ Before you begin, make sure you have:
 
 ### Installation
   Clone the repository:
-    ```
+    ```bash
     git clone https://github.com/MarynaShavlak/comfort-group-cleaning
     cd comfort-group-cleaning
-    
     ```
   
   Install project dependencies:
