@@ -14,6 +14,7 @@ services
 ![](https://img.shields.io/badge/Style-CSS3-informational?style=flat&logo=CSS3&color=1572B6)![](https://img.shields.io/badge/Style-CSS%20Grid%20Layout-informational?style=flat&logo=CSS3&color=1572B6)
 ![](https://img.shields.io/badge/Tools-Figma-informational?style=flat&logo=Figma&color=F24E1E)![](https://img.shields.io/badge/Tools-NPM-informational?style=flat&logo=NPM&color=CB3837)
 ![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=Git&color=F05032)![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
+![](https://img.shields.io/badge/Tools-Gulp-informational?style=flat&logo=Gulp&color=CF4647)
 
 ## 🔍 Introduction
 
@@ -66,6 +67,8 @@ user experience:
   and scalable by breaking down components into reusable building blocks. It
   enhances code understanding, facilitates collaboration, and reduces
   duplication.
+- ![Gulp](https://img.shields.io/badge/Gulp-Used-red)
+  **Gulp** is utilized as a task runner to streamline various development and build processes. It automates tasks such as compiling SCSS into CSS, minifying and concatenating JavaScript files, optimizing images, and more, enhancing the development workflow for improved efficiency and consistency.
 - ![Git and GitHub](https://img.shields.io/badge/Git%20and%20GitHub-Used-green)
   **Git and GitHub** are used for version control, enabling efficient
   collaboration, code sharing, and tracking of modifications. GitHub serves as a
@@ -76,10 +79,11 @@ user experience:
   and devices. By utilizing CSS media queries and flexible layouts, it provides
   an optimal user experience across various platforms, enhancing accessibility,
   satisfaction, and engagement.
+  
 
 ## :movie_camera: Visual Showcase
 
-https://github.com/MarynaShavlak/cleaning/assets/111526360/5235c37e-97ee-4dac-838f-e7105b53535a
+https://github.com/MarynaShavlak/comfort-group-cleaning/assets/111526360/baccf78d-bb1c-4e20-a8ae-125e8e3a3eb3
 
 
 ### Prerequisites
@@ -91,7 +95,7 @@ Before you begin, make sure you have:
 ### Installation
 
   Clone the repository:
-    ```bash
+    ```
     git clone https://github.com/MarynaShavlak/comfort-group-cleaning
     cd comfort-group-cleaning
     ```
@@ -121,7 +125,7 @@ Here's an overview of the directory structure of the Comfort Group Cleaning
 Website project:
 
 ```
-cleaning/
+comfort-group-cleaning/
 ├── src/
 │ ├── images/
 │ ├── scripts/
@@ -149,8 +153,8 @@ cleaning/
 │ │ ├── header.html
 │ │ ├── footer.html
 │ │ ├── ...
-├── dist/ # Compiled and optimized project files (generated)
-├── node_modules/ # Node.js modules and dependencies (generated)
+├── docs/ # Compiled and optimized project files for production use
+├── build / # Compiled project files for development and debugging purposes
 ├── .gitignore # Git ignore file
 ├── package.json
 ├── README.md
