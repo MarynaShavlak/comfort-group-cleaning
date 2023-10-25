@@ -135,7 +135,7 @@ text-align: justify;
 overflow: hidden;
 }
 
-.swiper-pagination {
+.section--cleaning-types .swiper-pagination {
   position: static;
   display: flex;
   align-items: center;
@@ -156,7 +156,7 @@ overflow: hidden;
 
 
 
-.swiper-pagination-bullet {
+.section--cleaning-types .swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,11 +196,9 @@ overflow: hidden;
     color: $primary-white-color;
     
   }
-
-  
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.section--cleaning-types .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin:0;
 }
 

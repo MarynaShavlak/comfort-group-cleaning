@@ -15,6 +15,7 @@
       rel="stylesheet"
     >
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico">
   </head>
@@ -1431,14 +1432,13 @@
     <h2 class="section__title title">Відгуки про компанію Comfort Group</h2>
     <div class="inner">
       <div class="gallery">
-        
           <ul class="swiper-wrapper reviews__swiper">
           </ul>
-       
       </div>
-          <div class="prev-btn">prev</div>
-          <div class="next-btn">next</div>
-      </div>
+          <button type="button" class="gallery__btn gallery__prev-btn" aria-label="перейти до попередніх відгуків"><i class="fa-solid fa-angles-left"></i></button >
+          <button type="button" class="gallery__btn gallery__next-btn" aria-label="перейти до наступних відгуків"><i class="fa-solid fa-angles-right"></i></button>
+      <div class="gallery__swiper-pagination"></div>
+        </div>
 
     
     <ul class="reviews__button-list">
