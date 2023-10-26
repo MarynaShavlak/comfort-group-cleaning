@@ -1908,16 +1908,61 @@
       <section class="section reviews">
   <div class="container reviews__container">
     <h2 class="section__title title">Відгуки про компанію Comfort Group</h2>
-    <div class="inner">
-      <div class="gallery">
+    <div class="inner-swiper">
+      
+        <div class="gallery">
           <ul class="swiper-wrapper reviews__swiper">
           </ul>
       </div>
           <button type="button" class="gallery__btn gallery__prev-btn" aria-label="перейти до попередніх відгуків"><i class="fa-solid fa-angles-left"></i></button >
           <button type="button" class="gallery__btn gallery__next-btn" aria-label="перейти до наступних відгуків"><i class="fa-solid fa-angles-right"></i></button>
-      <div class="gallery__swiper-pagination"></div>
-        </div>
+ 
+      
+           <div class="gallery__swiper-pagination"></div>
+    </div>
 
+
+    <div class="mobile__reviews">
+      <div class="mobile__gallery">
+        <ul class="mobile__reviews-list">
+        </ul>
+        <div class="animated-btn-wrap">
+          <button
+            class="mobile__show-more-btn reviews__btn btn blob-btn"
+            type="button"
+            aria-label="Показати більше відгуків"
+          >
+            Показати більше
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </button>
+          <svg class="animated-btn-icon">
+            <defs>
+              <filter id="goo-7" x="0%" y="0%" width="100%" height="100%">
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  result="blur"
+                  stdDeviation="10"
+                ></feGaussianBlur>
+                <feColorMatrix
+                  in="blur"
+                  type="matrix"
+                  values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                  result="goo"
+                ></feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+    </div>
+  </div>
     
     <ul class="reviews__button-list">
       <li class="button-list__item">

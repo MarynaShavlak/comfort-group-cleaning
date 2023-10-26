@@ -25,7 +25,6 @@ function toggleToolkitDescVisibility(el) {
       slideShadows: false,
     },
     speed: 1000,
-    autoHeight: true,
     grabCursor: true,
     pagination: {
       el: '.swiper-pagination',
