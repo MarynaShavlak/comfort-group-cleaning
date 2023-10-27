@@ -22,13 +22,94 @@
 }
 
 
-.discounts__slide{
+.discounts__slide {
+  position: relative;
   width: 1160px;
   height: 628px;
+  // padding: 30px;
   box-shadow: 0 0 12px 12px $first-additional-bg-color inset;
   background-color: $first-additional-bg-color;
   background-size: cover;
 }
+
+.swiper-slide__glass {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  top: 5%;
+  left: 5%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: calc(90% - 320px);
+  height: 90%;
+  padding: 40px 30px;
+  padding-left: 120px;
+  overflow: hidden;
+}
+
+.swiper-slide__glass:before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: -10%;
+  left: 50px;
+  width: 40px;
+  height: 110%;
+  background-color:$discount-color;
+  
+}
+
+
+.swiper-slide__glass:after {
+  content: '';
+  z-index: 3;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 130px;
+  height: 110px;
+  transform: rotate(-30deg);
+  background-image: url(../images/discounts/tie.svg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+
+.glass__descr {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  font-size:24px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.glass__terms {
+  font-size:24px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+
+.glass__accent {
+  font-size:28px;
+  font-weight: 700;
+  color: $main-accent-color;
+}
+.glass__accent--term {
+  font-size:30px;
+  font-weight: 700;
+  color: $main-accent-color;
+}
+
+
 
 
 .swiper-pagination-parent {
@@ -118,3 +199,6 @@
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin:0;
 }
+
+
+
