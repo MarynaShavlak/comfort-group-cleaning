@@ -131,9 +131,9 @@ text-align: justify;
   }
 }
 
-.swiper-slide {
-overflow: hidden;
-}
+// .swiper-slide {
+// overflow: hidden;
+// }
 
 .section--cleaning-types .swiper-pagination {
   position: static;
@@ -225,9 +225,7 @@ overflow: hidden;
     }
 }
 
-  
-
-.rooms__schema {
+ .rooms__schema {
   position: relative;
   border-radius: 20px;
   width: 335px;
@@ -247,19 +245,6 @@ overflow: hidden;
   }
 }
 
-.rooms__schema--current {
-  transform: translateX(0);
-}
-.rooms__schema--next {
-  transform: translate(100%) ;
-}
-.rooms__schema--prev {
-  transform: translate(-100%) ;
-}
-
-
-
-
 .toolkit__icon {
   fill: $main-accent-color;
   width: 13px;
@@ -269,6 +254,11 @@ overflow: hidden;
   @media screen and (min-width: 768px) {
     width: 18px;
     height: 18px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -280,17 +270,52 @@ overflow: hidden;
   background-color: $light-accent-color;
   width: 20px;
   height: 20px;
-  
+  animation: pulsate 1s infinite;
   @media screen and (min-width: 768px) {
-      width: 28px;
-      height: 28px;
+    width: 28px;
+    height: 28px;
   }
+  @media screen and (min-width: 768px) {
+    width: 38px;
+    height: 38px;
+  }
+ 
 
 }
 
-.toolkit__btn {
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.plus-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+.toolkit__wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolkit__btn:not(.toolkit__btn--reverse) {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   top: 95%;
   left:50%;
   transform: translate(-50%,-100%);
@@ -298,7 +323,7 @@ overflow: hidden;
 
 .toolkit__btn--reverse {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   bottom: 95%;
   left:50%;
   transform: translate(-50%,100%);
@@ -306,10 +331,8 @@ overflow: hidden;
 
 
 .toolkit__desc {
-  position:relative;
   text-align: center;
   display: block;
-  margin-bottom: 9px;
   background-color: $primary-white-color;
   border-radius: 5px;
   padding: 4px 6px;
@@ -318,18 +341,24 @@ overflow: hidden;
   transition: opacity $cubic;
   opacity: 0;
   @media screen and (min-width: 768px) {
-    margin-bottom: 14px;
     padding: 7px 10px;
     font-size: 13px;
     line-height: 1.38;
   }
+  
+  
 }
-
-.is-shown {
-  opacity: 1;
+.toolkit__desc:not(.toolkit__desc--reverse) {
+  position:relative;
+  margin-bottom: 9px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 14px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 34px;
+  }
+  
 }
-
-
 
 .toolkit__desc--reverse {
   position: absolute;
@@ -340,6 +369,16 @@ overflow: hidden;
     margin-top: 14px;
   }
 }
+
+
+
+.is-shown {
+  opacity: 1;
+}
+
+
+
+
 
 
 
@@ -354,6 +393,7 @@ overflow: hidden;
   left: 50%;
   transform: translate(-50%, 0);
 }
+
 .toolkit__desc--reverse:before {
   content: ' ';
   position: absolute;
@@ -366,365 +406,8 @@ overflow: hidden;
   transform: translate(-50%, 0);
 }
 
-.toolkit__wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
- .schema--kitchen .wrapper--first {
-  position: absolute;
-  bottom: 4px;
-  left: 39px;
-  width: 77px;
-  height: 49px;
-
-   @media screen and (min-width: 768px) {
-     width: 114px;
-     height: 70px;
-      bottom: 16px;
-      left: 168px;
-   }
-  @media screen and (min-width: 1440px) {
-      bottom: 66px;
-      left: 334px;
-  }
- }
-
- .schema--kitchen .wrapper--second{
-  position: absolute;
-  bottom: 85px;
-  left: 78px;
-  width: 99px;
-  height: 49px;
-
-   @media screen and (min-width: 768px) {
-     width: 146px;
-     height: 70px;
-    bottom: 191px;
-    left: 214px;
-   }
-  @media screen and (min-width: 1440px) {
-      bottom: 344px;
-      left: 429px;
-  }
- }
 
 
- .schema--kitchen .wrapper--third {
-  position: absolute;
-  bottom: 31px;
-  left:173px;
-  width: 60px;
-  height: 74px;
 
-   @media screen and (min-width: 768px) {
-    width: 184px;
-    height: 70px;
-    bottom: 144px;
-    left: 326px;
-   }
-  @media screen and (min-width: 1440px) {
-      bottom: 288px;
-      left: 625px;
-  }
- }
-
- .schema--kitchen .wrapper--fourth {
-  position: absolute;
-  bottom: 107px;
-  right: 75px;
-  width: 76px;
-  height: 49px;
-
-   @media screen and (min-width: 768px) {
-    width: 113px;
-    height: 70px;
-    bottom: 214px;
-    right: 125px;
-   }
-  @media screen and (min-width: 1440px) {
-      bottom: 400px;
-      right: 220px;
-  }
- }
-
- .schema--kitchen .wrapper--fifth {
-  position: absolute;
-  top: 7px;
-  right: 6px;
-  width: 93px;
-  height: 86px;
-
-   @media screen and (min-width: 768px) {
-    width: 239px;
-    height: 88px;
-    top: 62px;
-    right: 5px;
-   }
-  @media screen and (min-width: 1440px) {
-      top: 135px;
-      right: 42px;
-  }
- }
-
- .schema--room .wrapper--first {
-   position: absolute;
-   bottom: 20px;
-   left: 66px;
-   width: 90px;
-   height:60px;
-
-   @media screen and (min-width: 768px) {
-     width: 125px;
-     height: 90px;
-     bottom: 45px;
-     left: 175px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom:90px;
-     left: 334px;
-   }
- }
-
- .schema--room .wrapper--second {
-   position: absolute;
-   bottom: 80px;
-   left: 90px;
-   width: 99px;
-   height: 70px;
-
-   @media screen and (min-width: 768px) {
-     width: 146px;
-     height: 105px;
-     bottom: 180px;
-     left: 214px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom: 330px;
-     left: 429px;
-   }
- }
-
- .schema--room .wrapper--third {
-   position: absolute;
-   bottom: 20px;
-   left: 130px;
-   width: 120px;
-   height: 74px;
-
-   @media screen and (min-width: 768px) {
-     width: 184px;
-     height: 100px;
-     bottom: 100px;
-     left: 300px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom: 198px;
-     left: 600px;
-   }
- }
-
-.schema--room .wrapper--fourth {
-  position: absolute;
-  bottom: 70px;
-  left: 25px;
-  width: 90px;
-  height: 60px;
-
-  @media screen and (min-width: 768px) {
-    width: 130px;
-    height: 90px;
-    bottom: 140px;
-    left: 75px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    bottom: 260px;
-    left: 200px;
-  }
-}
-
-.schema--room .wrapper--fifth {
-  position: absolute;
-  top: 10px;
-  right: 6px;
-  width:120px;
-  height: 86px;
-
-  @media screen and (min-width: 768px) {
-    width: 239px;
-    height: 110px;
-    top: 62px;
-    right: 15px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    top: 180px;
-    right: 100px;
-  }
-}
-
- .schema--room .wrapper--sixth {
-    position: absolute;
-      top: 20px;
-      left: 130px;
-      width: 99px;
-      height: 70px;
-    
-      @media screen and (min-width: 768px) {
-        width: 146px;
-        height: 105px;
-        top: 50px;
-        left: 290px;
-      }
-    
-      @media screen and (min-width: 1440px) {
-        top: 160px;
-        left: 540px;
-      }
- }
-
- .schema--room .wrapper--seventh {
-   position: absolute;
-   bottom: 60px;
-   right: 6px;
-   width: 120px;
-   height: 75px;
-
-   @media screen and (min-width: 768px) {
-     width: 190px;
-     height: 90px;
-     bottom: 140px;
-     right: 15px;
-   }
-
-   @media screen and (min-width: 1440px) {
-    bottom: 230px;
-    right: 40px;
-   }
- }
- .schema--bath .wrapper--first {
-   position: absolute;
-   bottom: 10px;
-   left: 10px;
-   width: 120px;
-   height:60px;
-
-   @media screen and (min-width: 768px) {
-     width: 170px;
-     height: 90px;
-     bottom: 30px;
-     left: 30px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom:50px;
-     left: 100px;
-   }
- }
-
- .schema--bath .wrapper--second {
-   position: absolute;
-   bottom: 55px;
-   left: 55px;
-   width: 140px;
-   height: 60px;
-
-   @media screen and (min-width: 768px) {
-     width: 160px;
-     height: 90px;
-     bottom: 120px;
-     left: 170px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom: 200px;
-     left: 330px;
-   }
- }
-
- .schema--bath .wrapper--third {
-   position: absolute;
-   bottom: 20px;
-   left: 130px;
-   width: 120px;
-   height: 50px;
-
-   @media screen and (min-width: 768px) {
-     width: 184px;
-     height: 70px;
-     bottom: 60px;
-     left: 300px;
-   }
-
-   @media screen and (min-width: 1440px) {
-     bottom:160px;
-     left: 550px;
-   }
- }
-
-.schema--bath .wrapper--fourth {
-  position: absolute;
-  top: 10px;
-  left: 75px;
-  width: 90px;
-  height: 60px;
-
-  @media screen and (min-width: 768px) {
-    width: 130px;
-    height: 90px;
-    top: 65px;
-    left: 190px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    top: 145px;
-    left: 370px;
-  }
-}
-
-.schema--bath .wrapper--fifth {
-  position: absolute;
-  bottom: 55px;
-  right: 6px;
-  width:100px;
-  height: 50px;
-
-  @media screen and (min-width: 768px) {
-    width: 140px;
-    height: 70px;
-    bottom: 120px;
-    right: 35px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    bottom: 200px;
-    right: 120px;
-  }
-}
-
- .schema--bath .wrapper--sixth {
-    position: absolute;
-      top: 5px;
-      right: 55px;
-      width: 70px;
-      height: 60px;
-    
-      @media screen and (min-width: 768px) {
-        width: 146px;
-        height: 70px;
-        top: 50px;
-        right: 120px;
-      }
-    
-      @media screen and (min-width: 1440px) {
-        top: 140px;
-        right: 230px;
-      }
- }
 
 
