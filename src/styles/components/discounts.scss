@@ -1,0 +1,120 @@
+.discounts__slider {
+  position:relative;
+}
+
+.swiper-container-nested {
+  position:relative;
+}
+
+.swiper-container-parent {
+ overflow: hidden;
+ border-radius: none;
+}
+
+.swiper-container-nested {
+  overflow: hidden;
+  height: 628px;
+}
+
+
+.swiper-container-parent .swiper-slide {
+  border-radius: 0;
+}
+
+
+.discounts__slide{
+  width: 1160px;
+  height: 628px;
+  box-shadow: 0 0 12px 12px $first-additional-bg-color inset;
+  background-color: $first-additional-bg-color;
+  background-size: cover;
+}
+
+
+.swiper-pagination-parent {
+  position: static;
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.swiper-pagination-parent.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: fit-content;
+}
+
+.swiper-pagination-parent .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px;
+  color: $primary-black-color;
+  opacity: 1;
+  background: $additional-text-color;
+  color: $primary-white-color;
+  margin: 0;
+}
+
+
+.discount__pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.swiper-pagination-parent .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  opacity:0.4;
+}
+
+
+
+.swiper-pagination-nested.swiper-pagination-bullets {
+  top:20px;
+  right:20px;
+  left:auto;
+  display: flex;
+  width: fit-content;
+  gap: 20px;
+  flex-direction: column;
+  transform: translate3d(0,0,0);
+}
+
+.swiper-pagination-nested .swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: auto;
+  min-width: 230px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 20px;
+  color: $primary-black-color;
+  opacity: 1;
+  background: $additional-text-color;
+  color: $primary-white-color;
+  margin: 0;
+
+}
+
+.swiper-pagination-parent .swiper-pagination-bullet-active {
+    background-color: $main-accent-color;
+   svg {
+    fill:  $primary-white-color;
+   }
+}
+
+.swiper-pagination-nested .swiper-pagination-bullet-active {
+  color:  $primary-white-color;
+  background:$main-accent-color;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin:0;
+}

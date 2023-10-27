@@ -21,7 +21,7 @@ container.addEventListener("mouseout", hideDescriptionOnHoverOut);
       speed: 1000,
       grabCursor: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-rooms',
         clickable: true,
         renderBullet: (index, className) => {
           return `<li class="${className}">${roomTexts[index]}</li>`;
