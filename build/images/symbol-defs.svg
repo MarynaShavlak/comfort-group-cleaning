@@ -1,0 +1,7 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-copy" viewBox="0 0 32 32">
+<path fill="#080341" style="fill: var(--color1, #080341)" d="M26 22v-16l-1-1h-13l-1 1v4h-4l-1 1v16l1 1h13l1-1v-4h4l1-1zM21 21v-10l-1-1h-7v-3h11v14h-3zM8 12h11v14h-11v-14z"></path>
+</symbol>
+</defs>
+</svg>

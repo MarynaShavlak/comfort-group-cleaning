@@ -1,18 +1,18 @@
 import { seasonDiscountInfo } from "./discounts-data";
+import { canUseWebP, getImageName,  copyToClipboard } from "./utils";
+import { createGlass } from "./create-discount-glass";
 
-const parentElement = document.querySelector('.swiper-container-parent'); 
-const swiperWrapper = createSwiperWrapper();
-parentElement.appendChild(swiperWrapper);
-const currentSeason = getSeason();
-const initialSlide = getInitialSlide();
-const discountsSwiper = createDiscountsSwiper(initialSlide);
+const externalSliderContainer = document.querySelector('.swiper-container-parent'); 
+const externalSwiperWrapper = createExternalSwiperWrap();
+externalSliderContainer.appendChild(externalSwiperWrapper);
+const initialExternalSlide = getInitialExternalSlide();
+const externalSwiper = initializeExternalSwiper(initialExternalSlide);
 
-const nestedContainers = document.querySelectorAll('.swiper-container-nested');
-nestedContainers.forEach((container, index) => {
-  createInnerSwiper(container, index);
-});
+const innerSliderContainers = document.querySelectorAll('.swiper-container-nested');
+innerSliderContainers.forEach(initializeInnerSwiper);
+externalSliderContainer.addEventListener('click', handleCopyPromo)
 
-function createDiscountsSwiper(initialSlide) {
+function initializeExternalSwiper(initialSlide) {
   return new Swiper('.swiper-container-parent', {
     spaceBetween: 20,
     initialSlide: initialSlide,
@@ -31,12 +31,12 @@ function createDiscountsSwiper(initialSlide) {
     pagination: {
       el: ".swiper-pagination-parent",
       clickable: true,
-      renderBullet: renderDiscountBullet,
+      renderBullet: renderExternalBullet,
     }
   });
 }
 
-function createInnerSwiper(container, index) {
+function initializeInnerSwiper(container) {
   const slides = container.children[0].children;
   const array = Array.from(slides).map((i) => i.getAttribute('data-name'));
   const innerSwiper = new Swiper(container, {
@@ -62,84 +62,45 @@ function createInnerSwiper(container, index) {
     }
   });
 }
-function getInitialSlide() {
+
+function getInitialExternalSlide() {
   const currentSeason = getSeason();
-  return currentSeason === 'spring' ? 1 :
-         currentSeason === 'summer' ? 2 :
-         currentSeason === 'autumn' ? 3 : 0;
+  return ['spring', 'summer', 'autumn', 'winter'].indexOf(currentSeason) + 1 || 0;
 }
 
-function createSwiperSlide(season, imageIndex) {
-  const { image, dataName, description, terms, promo } = seasonDiscountInfo[season][imageIndex];
-  const slide = document.createElement('div');
-  slide.className = `swiper-slide discounts__slide discounts__slide--${season}`;
-  slide.setAttribute('data-name', dataName);
-  slide.style.backgroundImage = `url('../images/discounts/${image}')`;
-  const glass = document.createElement('div');
-  glass.className = 'swiper-slide__glass';
-  const descriptionElem = createGlassDescriptions(description, 'glass__descr');
-  const termsElem = createGlassTerms(terms, 'glass__terms');
-  const promoElem = createGlassElement(promo, 'glass__promo');
-  glass.appendChild(descriptionElem);
-  glass.appendChild(termsElem);
-  glass.appendChild(promoElem);
-  slide.appendChild(glass);
-  return slide;
-}
-
-function createSwiperContainer(season) {
-  const container = document.createElement('div');
-  container.className = 'swiper-container-nested';
-  
-  const innerWrapper = document.createElement('div');
-  innerWrapper.className = 'swiper-wrapper discounts__inner-swiper-wrapper';
-
-  for (let i = 0; i < seasonDiscountInfo[season].length; i++) {
-    const slide = createSwiperSlide(season, i);
-    innerWrapper.appendChild(slide);
-  }
-
-  container.appendChild(innerWrapper);
-
-  const pagination = document.createElement('div');
-  pagination.className = 'swiper-pagination swiper-pagination-nested';
-  container.appendChild(pagination);
-  return container;
-}
-
-function createSeasonSlide(season) {
+function createExternalSlide(season) {
   const slide = document.createElement('li');
   slide.className = `swiper-slide swiper-slide--${season}`;
 
-  const swiperContainer = createSwiperContainer(season);
+  const swiperContainer = createInnerSliderContainer(season);
   slide.appendChild(swiperContainer);
 
   return slide;
 }
 
-function createSwiperWrapper() {
+function createExternalSwiperWrap() {
   const swiperWrapper = document.createElement('ul');
   swiperWrapper.className = 'swiper-wrapper discounts__swiper-wrapper';
 
   const seasons = Object.keys(seasonDiscountInfo);
 
   seasons.forEach((season) => {
-    const seasonSlide = createSeasonSlide(season);
+    const seasonSlide = createExternalSlide(season);
     swiperWrapper.appendChild(seasonSlide);
   });
 
   return swiperWrapper;
 }
 
-function renderDiscountBullet(index, className) {
+function renderExternalBullet(index, className) {
   const seasons = Object.keys(seasonDiscountInfo);
   const season = seasons[index];
   const classSpan = `discount__pagination-btn btn--${season}`;
-  const svg = createSvgIcon(season);
+  const svg = createExternalPagIcon(season);
   return '<span class="' + className + " " + classSpan + '">' + svg.outerHTML + '</span>';
 }
 
-function createSvgIcon(season) {
+function createExternalPagIcon(season) {
   const svg = document.createElement('svg');
   svg.className = 'discount__pagination-icon';
   svg.width = 40;
@@ -150,6 +111,44 @@ function createSvgIcon(season) {
 
   svg.appendChild(use);
   return svg;
+}
+
+function createInnerSwiperSlide(season, imageIndex) {
+  const { image, dataName, description, terms, promo } = seasonDiscountInfo[season][imageIndex];
+  const imageUrl = getImageUrl(getImageName(image));
+  const slide = createInnerSlideBlock(season, dataName, imageUrl);
+  slide.appendChild(createGlass(description, terms, promo));
+  return slide;
+}
+
+function createInnerSlideBlock(season, dataName, imageUrl) {
+  const slide = document.createElement('div');
+  slide.className = `swiper-slide discounts__slide discounts__slide--${season}`;
+  slide.setAttribute('data-name', dataName);
+
+  if (canUseWebP()) {
+    slide.style.backgroundImage = imageUrl;
+  } else {
+    slide.style.cssText = `background-image: ${imageUrl}`;
+  }
+
+  return slide;
+}
+
+function createInnerSliderContainer(season) {
+  const container = document.createElement('div');
+  container.className = 'swiper-container-nested';
+  
+  const innerWrapper = document.createElement('div');
+  innerWrapper.className = 'swiper-wrapper discounts__inner-swiper-wrapper';
+  seasonDiscountInfo[season].forEach((_, i) => {
+    innerWrapper.appendChild(createInnerSwiperSlide(season, i));
+  });
+  container.appendChild(innerWrapper);
+  const pagination = document.createElement('div');
+  pagination.className = 'swiper-pagination swiper-pagination-nested';
+  container.appendChild(pagination);
+  return container;
 }
 
 function getSeason() {
@@ -166,62 +165,24 @@ function getSeason() {
 
 }
 
-function createGlassElement(content, className) {
-  const elem = document.createElement('p');
-  elem.className = className;
-  elem.innerHTML = content;
-  return elem;
-}
-function createGlassTerms(content, className) {
-  const elem = document.createElement('p');
-  elem.className = className;
-  elem.innerHTML = highlightTermsInString(content);
-  return elem;
+function getImageUrl(imageName) {
+  const supportsWebP = canUseWebP();
+  return supportsWebP
+    ? `url(../images/discounts/${imageName}.webp)`
+    : `url('../images/discounts/${image}')`;
 }
 
-function createGlassDescriptions(content, className) {
-  const container = document.createElement('div');
-  container.className = className;
-  const sentences = splitContent(content);
+function handleCopyPromo(e) {
+const clickedEl = e.target;
+const isCopyIcon = clickedEl.classList.contains('promo__copy-icon');
+if(isCopyIcon) {
+  const textEl  = clickedEl.previousElementSibling;
+  const text = textEl.textContent;
+  copyToClipboard(text);
+  textEl.classList.add('isCopied');
+  setTimeout(() => {
+    textEl.classList.remove('isCopied');
+  }, 1000);
+} 
 
-  sentences.forEach(sentence => {
-    const elem = document.createElement('p');
-    elem.innerHTML = highlightDiscountInString(sentence);
-    container.appendChild(elem);
-  });
-
-  return container;
 }
-
-function splitContent(inputString) {
-  const sentences = inputString.match(/[^.!?]+[.!?]+/g);
-
-  if (sentences && sentences.length >= 1) {
-    return sentences;
-  } else {
-    return [inputString];
-  }
-}
-
-function highlightDiscountInString(sentence) {
-  const regex = /(\d+%)/g;
-  const modifiedSentence = sentence.replace(
-    regex,
-    '<span class="glass__accent">$1</span>'
-  );
-
-  return modifiedSentence;
-}
-
-function highlightTermsInString(inputString) {
-  const regex = /з (.*?) по (.*?) (\d{4} року)/g;
-  const highlightedString = inputString.replace(
-    regex,
-    function (match, term1, term2, year) {
-      return `з <span class="glass__accent--term">${term1}</span> по <span class="glass__accent--term">${term2} ${year}</span> `;
-    }
-  );
-
-  return highlightedString;
-}
-

@@ -26,16 +26,22 @@
   position: relative;
   width: 1160px;
   height: 628px;
-  // padding: 30px;
   box-shadow: 0 0 12px 12px $first-additional-bg-color inset;
   background-color: $first-additional-bg-color;
   background-size: cover;
 }
 
+
+.active-dark-theme .discounts__slide {
+  box-shadow: 0 0 12px 12px $dark-add-color inset;
+  background-color: $dark-add-color;
+ }
+
 .swiper-slide__glass {
   position:absolute;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   top: 5%;
   left: 5%;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
@@ -47,7 +53,7 @@
   width: calc(90% - 320px);
   height: 90%;
   padding: 40px 30px;
-  padding-left: 120px;
+  padding-left: 130px;
   overflow: hidden;
 }
 
@@ -102,6 +108,7 @@ background-size: cover;
   font-size:28px;
   font-weight: 700;
   color: $main-accent-color;
+  animation: color-cycle 4s infinite;
 }
 .glass__accent--term {
   font-size:30px;
@@ -201,4 +208,100 @@ background-size: cover;
 }
 
 
+
+.promo {
+  height: 70px;
+  position: relative;
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+  border-radius:50px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.promo:before, .promo:after {
+  content:'';
+  position: absolute;
+  left:-2px;
+  top:-2px;
+  background: linear-gradient(45deg, #4D1299, #FF8427, #CC0000, #EBE7F3, #4D1299);
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: promo 20s linear infinite;
+  border-radius: 50px;
+
+}
+
+@keyframes promo {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.promo:after {
+  filter: blur(40px);
+ 
+}
+
+
+.promo__wrapper {
+    display: flex;
+  font-size: 24px;
+  color: $primary-white-color;
+  
+  
+}
+.promo__wrapper--left {
+  position: relative;
+  font-weight: 700;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: $discount-color;
+  width: 230px;
+  padding:20px;
+}
+.promo__wrapper--right {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: $primary-white-color;
+  padding: 20px;
+  padding-left: 5px;
+  padding-right: 10px;
+  span {
+    color: $primary-black-color;
+    transform: translate(-20px) scale(1);
+    
+    transition: color $cubic, transform $cubic;
+    &.isCopied {
+      color: $main-accent-color;
+      transform: translate(-20px) scale(1.1);
+    };
+  }
+}
+
+
+.promo__wrapper--left:after {
+  content:'';
+  position: absolute;
+  top:0;
+  right: 0;
+	border-bottom: 70px solid $primary-white-color;
+	border-left: 60px  solid transparent;
+}
+
+.promo__copy-icon {
+  cursor: pointer;
+  transition: fill $cubic;
+  &:hover {
+    fill: $main-accent-color;
+  }
+}
 
