@@ -72,7 +72,7 @@ gulp.task('images:docs', function() {
   .pipe(gulp.src('./src/images/**/*'))
   .pipe(changed('./docs/images/'))
 	.pipe(newer('./docs/images/'))
-	// .pipe(imagemin({verbose:true}))
+	.pipe(imagemin({verbose:true}))
 	.pipe(gulp.dest('./docs/images/'))
 	.pipe(connect.reload())
 })
