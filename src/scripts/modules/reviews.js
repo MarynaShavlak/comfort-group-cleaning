@@ -1,10 +1,11 @@
 import { reviews } from "./reviews-data";
 import Masonry from "masonry-layout";
+import { chunkArray } from "./utils";
 
 let currentReviewBlock = 1;
-document.addEventListener("DOMContentLoaded", initializePage);
+document.addEventListener("DOMContentLoaded", initializeReviewSwiper);
 
-function initializePage() {
+function initializeReviewSwiper() {
   const reviewsList = document.querySelector('.reviews__swiper');
   const mobileReviewsList = document.querySelector('.mobile__reviews-list');
   const showMoreReviewsBtn = document.querySelector('.mobile__show-more-btn');
@@ -171,11 +172,5 @@ function createText(textContent) {
   return text;
 }
 
-function chunkArray(array, chunkSize) {
-  const result = [];
-  for (let i = 0; i < array.length; i += chunkSize) {
-    result.push(array.slice(i, i + chunkSize));
-  }
-  return result;
-}
+
 
