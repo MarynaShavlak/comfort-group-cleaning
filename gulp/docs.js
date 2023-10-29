@@ -77,6 +77,11 @@ gulp.task('images:docs', function() {
 	.pipe(connect.reload())
 })
 
+
+
+
+
+
 gulp.task('files:docs', function() {
 	return gulp.src('./src/files/**/*')
 	.pipe(changed('./docs/files/'))
