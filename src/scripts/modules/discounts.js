@@ -168,8 +168,8 @@ function getSeason() {
 function getImageUrl(imageName) {
   const supportsWebP = canUseWebP();
   return supportsWebP
-    ? `url(../images/discounts/${imageName}.webp)`
-    : `url('../images/discounts/${image}')`;
+    ? `url(images/discounts/${imageName}.webp)`
+    : `url('images/discounts/${image}')`;
 }
 
 function handleCopyPromo(e) {
