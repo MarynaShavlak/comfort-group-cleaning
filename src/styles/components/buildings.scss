@@ -28,6 +28,11 @@
   background-color: transparent;
   height: auto;
   flex-basis: calc((100% - 20px)/2);
+   
+  img {
+    width: auto;
+    height: 100px;
+  }
   
     @media screen and (min-width: 768px) and (max-width: 1439px) {
       flex-basis: calc((100% - 2*30px)/3);
