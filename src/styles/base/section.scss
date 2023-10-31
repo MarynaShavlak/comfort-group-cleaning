@@ -190,3 +190,11 @@ line-height: 1.21;
 .active-dark-theme .section__container {
   background-color: $dark-add-3-color;
 }
+
+.title--dry-clean {
+  margin-top: 40px;
+  @media screen and (min-width: 1440px) {
+    margin-top: 64px;
+  }
+  }
+  

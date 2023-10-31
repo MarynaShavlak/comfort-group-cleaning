@@ -1,13 +1,62 @@
-import { servicesItemsData
+import { servicesItemsData, drycleanData 
  } from "./services-types-data";
 
  const servicesContainer = document.querySelector('.block-wrapper.services-types__list');
+ const drycleanContainer = document.querySelector('.dry-clean__list');
+ createServiceItemsList();
+ createDrycleanItemsList();
+ const drycleanSwiper = initializeDrycleanSwiper();
 
- servicesItemsData.forEach(({imageName,imageText}) => {
-  const listItem = createServiceItem(imageName,imageText);
-  servicesContainer.appendChild(listItem);
-});
+ // drycleanSliderEventHandlers(drycleanSwiper);
+ function initializeDrycleanSwiper() {
+   const swiper = new Swiper('.swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    loopedSlides: 2,
+    watchOverflow: true,
+    coverflowEffect: {
+      rotate: 0,
+      stretch:0, 
+      depth: 100,
+      modifier:1.5, 
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    mousewheel: {
+      invert: true,
+    },
+    speed: 400,
+    // autoplay: {
+    //   delay: 2000,
+    //   disabledOnInteraction: true,
+    // },
+   
+  });
+  return swiper;
+ }
+ 
 
+
+
+
+function createServiceItemsList() {
+  servicesItemsData.forEach(({ imageName, imageText }) => {
+    const listItem = createServiceItem(imageName, imageText);
+    servicesContainer.appendChild(listItem);
+  });
+}
+
+function createDrycleanItemsList() {
+  drycleanData.forEach(({ name, cost, duration }) => {
+    const listItem = createDrycleanItem({ name, cost, duration });
+    drycleanContainer.appendChild(listItem);
+  });
+}
 
 function createServiceItem(imageName, text) {
   const listItem = document.createElement('li');
@@ -27,27 +76,37 @@ function createServiceItem(imageName, text) {
   return listItem;
 }
 
-const swiper = new Swiper('.swiper', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 5,
-  slidesPerGroup:1,
-  coverflowEffect: {
-    rotate: 20,
-    stretch:50, 
-    // depth: 200,
-    modifier:1, 
-    slidesShadows: true,
-  },
-  speed: 400,
-  spaceBetween: 20,
-  initialSlide: 0,
-  loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  //   disabledOnInteraction: true,
-  // }
+function createDrycleanItem({name, cost, duration}) {
+  const li = document.createElement('li');
+  li.className = 'dry-clean__item swiper-slide';
 
-  // spaceBetween: 100,
-})
+  const title = document.createElement('h3');
+  title.className = 'dry-clean__title';
+  title.textContent = name;
+
+  const costEl = document.createElement('p');
+  costEl.className = 'dry-clean__cost';
+  costEl.textContent = `~${cost}`;
+
+  const durationEl = document.createElement('p');
+  durationEl.className = 'dry-clean__duration';
+  durationEl.innerHTML = `<i class="fa-regular fa-clock"></i> ${duration}`;
+
+  li.appendChild(title);
+  li.appendChild(costEl);
+  li.appendChild(durationEl);
+  return li;
+}
+
+function drycleanSliderEventHandlers(gallery) {
+  const drycleanSlider = document.querySelector('.dry-clean__swiper');
+  drycleanSlider.addEventListener('mouseleave', () => {
+    gallery.params.autoplay.disableOnInteraction = false;
+    gallery.params.autoplay.delay = 2000;
+    gallery.autoplay.start();
+  });
+
+  drycleanSlider.addEventListener('mouseenter', () => {
+    gallery.autoplay.stop();
+  });
+}
