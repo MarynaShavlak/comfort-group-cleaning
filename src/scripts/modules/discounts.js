@@ -1,5 +1,5 @@
 import { seasonDiscountInfo } from "./discounts-data";
-import { canUseWebP, getImageName,  copyToClipboard } from "./utils";
+import { canUseWebP, getImageName,  copyToClipboard, getImageUrl} from "./utils";
 import { createGlass } from "./create-discount-glass";
 
 const externalSliderContainer = document.querySelector('.swiper-container-parent'); 
@@ -115,7 +115,7 @@ function createExternalPagIcon(season) {
 
 function createInnerSwiperSlide(season, imageIndex) {
   const { image, dataName, description, terms, promo } = seasonDiscountInfo[season][imageIndex];
-  const imageUrl = getImageUrl(getImageName(image));
+  const imageUrl = getImageUrl('discounts', getImageName(image));
   const slide = createInnerSlideBlock(season, dataName, imageUrl);
   slide.appendChild(createGlass(description, terms, promo));
   return slide;
@@ -165,12 +165,7 @@ function getSeason() {
 
 }
 
-function getImageUrl(imageName) {
-  const supportsWebP = canUseWebP();
-  return supportsWebP
-    ? `url(images/discounts/${imageName}.webp)`
-    : `url('images/discounts/${image}')`;
-}
+
 
 function handleCopyPromo(e) {
 const clickedEl = e.target;

@@ -32,3 +32,11 @@ export function copyToClipboard(text) {
     }
     return result;
   }
+
+
+  export function getImageUrl(directory, imageName) {
+    const supportsWebP = canUseWebP();
+    return supportsWebP
+      ? `url(images/${directory}/${imageName}.webp)`
+      : `url('images/${directory}/${image}')`;
+  }

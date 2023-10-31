@@ -40,9 +40,9 @@ export const servicesItemsData = [
 export const drycleanData = [
 {name: 'Диван', cost: '120 zł', duration: '3 год',file:'sofa.jpg'},
 {name: 'Кутовий диван', cost: '100 zł', duration: '4 год',file:'sofa-corner.jpg'},
-{name: 'Крісло', cost: '50z ł', duration: '1 год',file:'armchair.jpg'},
+{name: 'Крісло', cost: '50 zł', duration: '1 год',file:'armchair.jpg'},
 {name: 'Стільці', cost: '20 zł', duration: '30 хвилин',file:'chair.jpg'},
-{name: 'Матрац', cost: '80 zł', duration: '3 год',file:'mattrass.jpg'},
+{name: 'Матрац', cost: '80 zł', duration: '3 год',file:'mattress.jpg'},
 {name: 'Ковролін', cost: '8 zł/м²', duration: '3 год',file:'carpet.jpg'},
 {name: 'Подушка', cost: '7 zł/шт', duration: '30 хвилин',file:'pillow.jpg'},
 {name: 'Штори', cost: '5 zł/м²', duration: '1 год',file:'curtains.jpg'},

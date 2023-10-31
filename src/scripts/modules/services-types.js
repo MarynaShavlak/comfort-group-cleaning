@@ -1,5 +1,6 @@
 import { servicesItemsData, drycleanData 
  } from "./services-types-data";
+ import { canUseWebP, getImageName,  copyToClipboard, getImageUrl} from "./utils";
 
  const servicesContainer = document.querySelector('.block-wrapper.services-types__list');
  const drycleanContainer = document.querySelector('.dry-clean__list');
@@ -7,7 +8,7 @@ import { servicesItemsData, drycleanData
  createDrycleanItemsList();
  const drycleanSwiper = initializeDrycleanSwiper();
 
- // drycleanSliderEventHandlers(drycleanSwiper);
+ drycleanSliderEventHandlers(drycleanSwiper);
  function initializeDrycleanSwiper() {
    const swiper = new Swiper('.swiper', {
     effect: 'coverflow',
@@ -17,11 +18,12 @@ import { servicesItemsData, drycleanData
     loop: true,
     loopedSlides: 2,
     watchOverflow: true,
+    slideToClickedSlide: true,
     coverflowEffect: {
       rotate: 0,
       stretch:0, 
       depth: 100,
-      modifier:1.5, 
+      modifier:2, 
     },
     keyboard: {
       enabled: true,
@@ -30,11 +32,10 @@ import { servicesItemsData, drycleanData
     mousewheel: {
       invert: true,
     },
-    speed: 400,
-    // autoplay: {
-    //   delay: 2000,
-    //   disabledOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 1500,
+      disabledOnInteraction: true,
+    },
    
   });
   return swiper;
@@ -52,8 +53,8 @@ function createServiceItemsList() {
 }
 
 function createDrycleanItemsList() {
-  drycleanData.forEach(({ name, cost, duration }) => {
-    const listItem = createDrycleanItem({ name, cost, duration });
+  drycleanData.forEach(({ name, cost, duration, file }) => {
+    const listItem = createDrycleanItem({ name, cost, duration, file });
     drycleanContainer.appendChild(listItem);
   });
 }
@@ -76,9 +77,15 @@ function createServiceItem(imageName, text) {
   return listItem;
 }
 
-function createDrycleanItem({name, cost, duration}) {
+function createDrycleanItem({name, cost, duration, file}) {
   const li = document.createElement('li');
   li.className = 'dry-clean__item swiper-slide';
+  const imageUrl = getImageUrl('services/dryclean', getImageName(file));
+  if (canUseWebP()) {
+    li.style.backgroundImage = imageUrl;
+  } else {
+   li.style.cssText = `background-image: ${imageUrl}`;
+  }
 
   const title = document.createElement('h3');
   title.className = 'dry-clean__title';
@@ -102,7 +109,7 @@ function drycleanSliderEventHandlers(gallery) {
   const drycleanSlider = document.querySelector('.dry-clean__swiper');
   drycleanSlider.addEventListener('mouseleave', () => {
     gallery.params.autoplay.disableOnInteraction = false;
-    gallery.params.autoplay.delay = 2000;
+    gallery.params.autoplay.delay = 1500;
     gallery.autoplay.start();
   });
 
