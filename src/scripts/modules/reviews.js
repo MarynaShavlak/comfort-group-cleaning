@@ -1,6 +1,6 @@
 import { reviews } from "./reviews-data";
 import Masonry from "masonry-layout";
-import { chunkArray } from "./utils";
+import { chunkArray, createPicture} from "./utils";
 
 let currentReviewBlock = 1;
 document.addEventListener("DOMContentLoaded", initializeReviewSwiper);
@@ -126,36 +126,17 @@ function createRatingStars(rating) {
 function createRatingItem() {
   const ratingItem = document.createElement('li');
   ratingItem.className = 'rating__item';
-  const picture = createPicture(20, 'images/reviews/tablet/star', 2, '(max-width: 1439px)');
+  const pictureParams =     {
+    width: 20,
+    srcPrefix: 'images/reviews/tablet/star', 
+    media: '(max-width: 1439px)', 
+    alt: 'Жовта зірка',
+    className: 'rating__icon'
+  }
+  
+  const picture = createPicture(pictureParams);
   ratingItem.appendChild(picture);
   return ratingItem;
-}
-
-function createPicture(width, srcPrefix, scaleFactor, media) {
-  const picture = document.createElement('picture');
-  picture.className = 'rating__icon';
-  picture.appendChild(createSource(width, srcPrefix, scaleFactor, media));
-  picture.appendChild(createImage(26, 26, `${srcPrefix}@1x.png`, 'Жовта зірка'));
-  return picture;
-}
-
-function createSource(width, srcPrefix, scaleFactor, media) {
-  const source = document.createElement('source');
-  source.width = width;
-  source.height = width;
-  source.srcset = `${srcPrefix}@1x.png 1x, ${srcPrefix}@2x.png ${scaleFactor}x`;
-  source.media = media;
-  return source;
-}
-
-function createImage(width, height, src, alt) {
-  const img = document.createElement('img');
-  img.className = 'rating__icon';
-  img.width = width;
-  img.height = height;
-  img.src = src;
-  img.alt = alt;
-  return img;
 }
 
 function createTitle(name) {

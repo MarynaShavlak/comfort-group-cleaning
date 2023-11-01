@@ -1,52 +1,3 @@
-// import $ from "jquery";
-// const menu = [
-//   'Будинки та квартири ',
-//   'Офіси, ресторани та магазини',
-//   'Після ремонту',
-// ]
-// const swiper = new Swiper('.swiper', {
-//   speed: 1000,
-//   spaceBetween: 0,
-//   initialSlide: 2, 
-//   touchRatio:0,
-//   // autoplay: {
-//   //   delay: 5000,
-//   //   disableOnInteraction: false
-//   // },
-//   // autoplayDisableOnInteration: false,
-//   effect: 'fade',
-//   pagination: {
-//     clickable:true,
-//     el: '.swiper-pagination',
-//     renderBullet: function(index, className) {
-//       return '<span class="' + className + '">' + (menu[index]) + '</span>';
-//     }
-//   },
-//   on: {
-//     slideChangeTransitionStart: function() {
-//       $('.swiper-slide.swiper-slide-active .calc-banner__title').css('left', '0px')
-//       $('.swiper-slide.swiper-slide-active .calc-banner__images-wrapper').css('left', '150px')
-//     },
-//     slideChange: function() {
-//       $('.swiper-slide.swiper-slide-active .calc-banner__title').css('left', '100%')
-//       $('.swiper-slide.swiper-slide-active .calc-banner__images-wrapper').css('left', '100%')
-//     },
-//   },
-  
-// });
-
-// $('.swiper--calc-banner .swiper-pagination  .swiper-pagination-bullet:first-child').trigger('click');
-
-// $('.swiper--calc-banner .swiper-slide').on('mousemove', (function(event) {
-//   $('.calc-banner__image').each(function() {
-//     const layers = $(this).data('value'); 
-//     const x = ($(window).innerWidth() - event.pageX * layers) / 100;
-//     const y = ($(window).innerHeight() - event.pageY * layers) / 100;
-//     $(this).css('margin-left', x + "px").css('margin-top', y + 'px');
-//   });
-// }));
-
-
 import $ from "jquery";
 import gsap from "gsap";
 
@@ -114,6 +65,8 @@ function handleMouseMove(event) {
 }
 
 $('.swiper--calc-banner .swiper-slide').on('mousemove', handleMouseMove);
+
+
 
 
 
