@@ -13,7 +13,7 @@
   }
 }
 
-.section--cleaning-types, .reviews, .section--buildings, .section--repair {
+.section--cleaning-types, .reviews, .section--buildings, .section--repair{
   border-bottom: 50px solid transparent;
   border-top: 50px solid transparent;
   position: relative;
@@ -34,6 +34,21 @@
   }
 }
 
+.section--calc-banner {
+
+  border-bottom: 50px solid transparent;
+  position: relative;
+  border-bottom: 30px solid transparent;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 42px;
+
+  }
+  @media screen and (min-width: 1440px) {
+      border-bottom: 50px solid transparent;
+      padding-bottom: 66px;
+  }
+}
+
 
 .section--cleaning-types::before, .reviews::before, .section--buildings::before, .section--repair::before{
   content: "";
@@ -51,6 +66,25 @@
   }
 }
 
+.section--calc-banner:after{
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 110%;
+  background-image: linear-gradient(to right, $first-additional-bg-color, $first-additional-bg-color,$first-additional-bg-color);
+  // background-image: linear-gradient(to right, red,red,red);
+  filter: blur(10px);
+  z-index: 2;
+  bottom: -20px;
+  height: 40px;
+    @media screen and (min-width: 1440px) {
+      left: -50px;
+      bottom: -30px;
+        height: 50px;
+    }
+}
+
+
 .active-dark-theme .section--cleaning-types::before,
 .active-dark-theme .reviews::before, 
 .active-dark-theme .section--cleaning-types::after,
@@ -60,6 +94,10 @@
 .active-dark-theme .section--repair::before, 
 .active-dark-theme .section--repair::after {
     background-image: linear-gradient(to right, $dark-add-4-color, $dark-add-4-color, $dark-add-4-color);
+}
+
+.active-dark-theme  .section--calc-banner:after{
+  background-image: linear-gradient(to right, $dark-add-color, $dark-add-color, $dark-add-color);
 }
 
 
@@ -112,10 +150,6 @@ background-color: $dark-add-color;
     padding-top: 74px;
   }
 }
-
-
-
-
 
 .section--benefits {
   padding-top: 30px;
