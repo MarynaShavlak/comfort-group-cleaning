@@ -16,10 +16,10 @@ function initializeSwiper() {
     initialSlide: 2,
     touchRatio: 0,
     effect: 'fade',
-  //     autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false
-  // },
+      autoplay: {
+    delay: 2000,
+    disableOnInteraction: false
+  },
     pagination: {
       clickable: true,
       el: '.swiper-pagination',

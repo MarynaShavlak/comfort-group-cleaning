@@ -42,6 +42,7 @@
 		"body-scroll-lock": "^4.0.0-beta.0",
 		"gsap": "^3.12.2",
 		"jquery": "^3.7.1",
-		"masonry-layout": "^4.2.2"
+		"masonry-layout": "^4.2.2",
+		"vanilla-tilt": "^1.8.1"
 	}
 }
