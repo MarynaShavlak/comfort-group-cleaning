@@ -343,6 +343,7 @@
         
       </li>
     </ul>
+    
     </div>
 </section>
 
@@ -354,11 +355,49 @@
 
     <h2 class="section__title title title--dry-clean">Вартість хімчистки</h2>
     <div class="swiper dry-clean__swiper">
-      <ul class="dry-clean__list swiper-wrapper">
-    </ul>
+      <ul class="dry-clean__list swiper-wrapper"></ul>
+     </div>
+    
+   <h2 class="section__title title title--comparison">Трансформація Чистоти: До і Після Прибирання</h2>
+   <div class="comparison__container">
+     <ul class="comparison__categories-list"></ul>
+     <ul class="comparison__slider-list"></ul>
+     <div class="animated-btn-wrap isVisible">
+      <button
+        class="mobile__show-more-btn comparison__show-more-btn btn blob-btn"
+        type="button"
+        aria-label="Показати більше відгуків"
+      >
+        Показати більше
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </button>
+      <svg class="animated-btn-icon">
+        <defs>
+          <filter id="goo-7" x="0%" y="0%" width="100%" height="100%">
+            <feGaussianBlur
+              in="SourceGraphic"
+              result="blur"
+              stdDeviation="10"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+              result="goo"
+            ></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
    </div>
-    
-    
       <div class="cleaning__banner banner banner--services">
       <h3 class="title--white title--no-margin title--services">
         Не знайшли потрібну послугу?

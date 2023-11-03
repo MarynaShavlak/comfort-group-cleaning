@@ -21,7 +21,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-4',
     afterName: 'after-4',
     desc: 'Фото кімнати',
-    categories: ['Розкладання речей'],
+    categories: ['Речі'],
   },
   {
     beforeName: 'before-5',
@@ -45,7 +45,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-8',
     afterName: 'after-8',
     desc: 'Фото кімнати',
-    categories: ['Сміття', 'Розкладання речей' ],
+    categories: ['Сміття', 'Речі' ],
   },
   {
     beforeName: 'before-9',
@@ -57,7 +57,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-10',
     afterName: 'after-10',
     desc: 'Фото крісла',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-11',
@@ -69,7 +69,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-12',
     afterName: 'after-12',
     desc: 'Фото кімнати',
-    categories: ['Сміття', 'Розкладання речей', 'Підлога' ],
+    categories: ['Сміття', 'Речі', 'Підлога' ],
   },
   {
     beforeName: 'before-13',
@@ -87,7 +87,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-15',
     afterName: 'after-15',
     desc: 'Фото дивану',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-16',
@@ -99,13 +99,13 @@ export const  comparisonImagesData = [
     beforeName: 'before-17',
     afterName: 'after-17',
     desc: 'Фото килима',
-    categories: ['Хімчистка килимів'],
+    categories: ['Килим'],
   },
   {
     beforeName: 'before-18',
     afterName: 'after-18',
     desc: 'Фото дивану',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-19',
@@ -177,7 +177,7 @@ export const  comparisonImagesData = [
     beforeName: 'before-30',
     afterName: 'after-30',
     desc: 'Фото крісел',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-31',
@@ -219,13 +219,13 @@ export const  comparisonImagesData = [
     beforeName: 'before-37',
     afterName: 'after-37',
     desc: 'Фото крісла',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-38',
     afterName: 'after-38',
     desc: 'Фото дивану',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-39',
@@ -237,13 +237,13 @@ export const  comparisonImagesData = [
     beforeName: 'before-40',
     afterName: 'after-40',
     desc: 'Фото кімнати',
-    categories: ['Розкладання речей','Стіни', 'Підлога'],
+    categories: ['Речі','Стіни', 'Підлога'],
   },
   {
     beforeName: 'before-41',
     afterName: 'after-41',
     desc: 'Фото матрацу',
-    categories: ['Хімчистка меблів'],
+    categories: ['Меблі'],
   },
   {
     beforeName: 'before-42',

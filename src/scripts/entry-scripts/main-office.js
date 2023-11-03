@@ -3,7 +3,6 @@ import '../modules/aside-menu.js';
 import '../modules/theme-toggler.js';
 import '../modules/scroll-to-top.js';
 import '../modules/questions.js';
-import '../modules/before-after-slider.js';
 import '../modules/reviews.js';
 import '../modules/modal.js';
 import '../modules/support-modal.js';

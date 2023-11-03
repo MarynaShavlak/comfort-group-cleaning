@@ -176,6 +176,18 @@ padding: 17px 25px;
     display: none;
   }
 }
+.comparison__show-more-btn {
+  display: flex;
+  padding: 15px 23px;
+  font-size: 16px;
+  line-height: 1.38;
+  min-width: 277px;
+  
+  &:hover,
+  &:focus {
+    background-color: $second-additional-bg-color;
+  }
+}
 
 
 .connection__btn {

@@ -149,6 +149,7 @@
 .comparison__categories-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   padding-left: 35px;
   padding-right: 35px;
@@ -187,4 +188,19 @@
 .comparison-slider.filtered {
   transform: scale(0.2) translateY(200px);
   opacity: 0;
+}
+
+
+.comparison__container .animated-btn-wrap {
+  opacity: 0;
+  transition: opacity $cubic;
+}
+
+.comparison__container .animated-btn-wrap.isVisible {
+  opacity: 1;
+}
+
+.comparison-slider--hidden {
+  display: none;
+  /* You can also apply other styles as needed */
 }

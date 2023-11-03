@@ -4,11 +4,15 @@ import { comparisonImagesData } from './before-after-data';
 
 const grid = document.querySelector('.comparison__slider-list');
 const buttonContainer = document.querySelector(".comparison__categories-list");
+const animatedBtnWrap = document.querySelector('.animated-btn-wrap');
 const gutterSize = 20;
 
-let chosenCategory = 'Всі';
-createCategoryItems();
 
+
+let chosenCategory = 'Всі';
+let currentPage = 1;
+const itemsPerPage = 6;
+createCategoryItems();
 createComparisonSliderList();
 buttonContainer.addEventListener('click', handleCategory )
 initializeMasonry();
@@ -16,6 +20,12 @@ initializeMasonry();
   
 document.addEventListener('DOMContentLoaded', () => {
   initializeSlider();
+});
+
+animatedBtnWrap.addEventListener('click', () => {
+  currentPage++;
+  toggleShowMoreImagesBtn();
+  generateUpdatedMasonry();
 });
 
   function initializeMasonry() {
@@ -93,9 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createComparisonSliderList() {
     const container = document.querySelector('.comparison__slider-list');
-    comparisonImagesData.forEach(({ beforeName, afterName, desc, categories }) => {
+    comparisonImagesData.forEach(({ beforeName, afterName, desc, categories }, index) => {
       const listItem = createComparisonSliderItem({beforeName, afterName, desc, categories});
       listItem.classList.add('comparison-slider');
+      listItem.setAttribute('data-page', Math.floor(index / itemsPerPage) + 1);
+    if (Math.floor(index / itemsPerPage) >= currentPage) {
+      listItem.classList.add('comparison-slider--hidden');
+    }
       container.appendChild(listItem);
     });
   }
@@ -214,28 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function handleCategory(e) {
-    if (!e.target.classList.contains('category__button')) {
+    const {target} = e;
+    if (!target.classList.contains('category__button')) {
       return;
     }
-
-    toggleCategory(e.target, buttonContainer.querySelectorAll('.category__button'));
-
-    const category = e.target.textContent;
-    chosenCategory = category;
-
-    const pictureList = grid.querySelectorAll('.comparison-slider');
-    pictureList.forEach(item => {
-      const categories = item.dataset.categories.split(', ');
-      const hasChosenCategory = chosenCategory === 'Всі' || categories.includes(chosenCategory);
-      item.classList.toggle('filtered', !hasChosenCategory);
-    });
-
-    setTimeout(() => {
-      new Masonry(grid, {
-        itemSelector: '.comparison-slider:not(.filtered)',
-        gutter: gutterSize,
-      });
-    }, 300);
+    currentPage = 1;  
+    updateChosenCategory(target.textContent)   
+    toggleCategory(target, buttonContainer.querySelectorAll('.category__button'));
+    filterImages();
+    toggleShowMoreImagesBtn(chosenCategory);
+    generateUpdatedMasonry();
   }
 
   function toggleCategory(btn, allBtnList) {
@@ -243,30 +245,41 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.classList.add('category__button--active')
   }
 
+  // function toggleShowMoreImagesBtn(chosenCategory) {
+  //   if (chosenCategory === 'Всі') {
+  //     animatedBtnWrap.classList.add('isVisible'); 
+  //   } else {
+  //     animatedBtnWrap.classList.remove('isVisible'); 
+  //   }
+  // }
 
-
-const margin = 10; // Minimum distance between items
-const containerWidth = buttonContainer.clientWidth;
-console.log('containerWidth : ', containerWidth );
-
-function arrangeItems() {
-  const buttons = buttonContainer.querySelectorAll(".category__item");
-  let widthArray =[];
-
-  buttons.forEach(btn => {
-    const btnWidth = btn.clientWidth;
-    const btnText = btn.querySelector('button').textContent;
-    console.log('btnText: ', btnText);
-    const obj = {
-      name: btnText,
-      width: btnWidth,
+  function toggleShowMoreImagesBtn() {
+    const totalPages = Math.ceil(grid.querySelectorAll('.comparison-slider').length / itemsPerPage);
+    if (currentPage < totalPages) {
+      animatedBtnWrap.classList.add('isVisible');
+    } else {
+      animatedBtnWrap.classList.remove('isVisible');
     }
-    widthArray.push(obj );
-    console.log('btnWidth: ', btnWidth);
-  })
-  console.log('widthArray: ', widthArray);
-}
+  }
 
-arrangeItems();
+  function updateChosenCategory(text) {
+    chosenCategory = text;
+  }
 
+  function filterImages() {
+    const pictureList = grid.querySelectorAll('.comparison-slider');
+    pictureList.forEach(item => {
+      const categories = item.dataset.categories.split(', ');
+      const hasChosenCategory = chosenCategory === 'Всі' || categories.includes(chosenCategory);
+      item.classList.toggle('filtered', !hasChosenCategory);
+    });
+  }
 
+  function generateUpdatedMasonry() {
+    setTimeout(() => {
+      new Masonry(grid, {
+        itemSelector: '.comparison-slider:not(.filtered)',
+        gutter: gutterSize,
+      });
+    }, 300);
+  }

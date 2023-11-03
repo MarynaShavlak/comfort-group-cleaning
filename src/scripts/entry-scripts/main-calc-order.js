@@ -4,6 +4,7 @@ import '../modules/calc-banner.js';
 import '../modules/theme-toggler.js';
 import '../modules/scroll-to-top.js';
 import '../modules/chose-services.js';
+import '../modules/reviews.js';
 import '../modules/modal.js';
 import '../modules/subscr-modal.js';
 import '../modules/calendar.js';
