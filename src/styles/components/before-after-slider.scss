@@ -192,15 +192,10 @@
 
 
 .comparison__container .animated-btn-wrap {
-  opacity: 0;
-  transition: opacity $cubic;
+  display: none;
 }
 
 .comparison__container .animated-btn-wrap.isVisible {
-  opacity: 1;
+  display: block;
 }
 
-.comparison-slider--hidden {
-  display: none;
-  /* You can also apply other styles as needed */
-}
