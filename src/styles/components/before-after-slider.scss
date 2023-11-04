@@ -191,11 +191,25 @@
 }
 
 
-.comparison__container .animated-btn-wrap {
+.comparison__container .btn-wrap--more, 
+.comparison__container .btn-wrap--less{
   display: none;
 }
 
-.comparison__container .animated-btn-wrap.isVisible {
+.comparison__container .btn-wrap--more.isVisible,
+.comparison__container .btn-wrap--less.isVisible  {
   display: block;
+}
+
+.more-less-btn-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap:10px;
+      align-items: center;
+  }
+
 }
 

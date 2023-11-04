@@ -362,41 +362,79 @@
    <div class="comparison__container">
      <ul class="comparison__categories-list"></ul>
      <ul class="comparison__slider-list"></ul>
-     <div class="animated-btn-wrap isVisible">
-      <button
-        class="mobile__show-more-btn comparison__show-more-btn btn blob-btn"
-        type="button"
-        aria-label="Показати більше відгуків"
-      >
-        Показати більше
-        <span class="blob-btn__inner">
-          <span class="blob-btn__blobs">
-            <span class="blob-btn__blob"></span>
-            <span class="blob-btn__blob"></span>
-            <span class="blob-btn__blob"></span>
-            <span class="blob-btn__blob"></span>
+     <ul class="more-less-btn-list">
+      <li class="animated-btn-wrap btn-wrap--more isVisible">
+        <button
+          class="mobile__show-more-btn comparison__show-more-btn btn blob-btn"
+          type="button"
+          aria-label="Показати більше фото до/після"
+        >
+          Показати більше
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
           </span>
-        </span>
-      </button>
-      <svg class="animated-btn-icon">
-        <defs>
-          <filter id="goo-7" x="0%" y="0%" width="100%" height="100%">
-            <feGaussianBlur
-              in="SourceGraphic"
-              result="blur"
-              stdDeviation="10"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
-              result="goo"
-            ></feColorMatrix>
-            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-          </filter>
-        </defs>
-      </svg>
-    </div>
+        </button>
+        <svg class="animated-btn-icon">
+          <defs>
+            <filter id="goo-7" x="0%" y="0%" width="100%" height="100%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                result="blur"
+                stdDeviation="10"
+              ></feGaussianBlur>
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                result="goo"
+              ></feColorMatrix>
+              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+      </li>
+      <li class="animated-btn-wrap btn-wrap--less">
+        <button
+          class="mobile__show-more-btn comparison__show-more-btn btn blob-btn"
+          type="button"
+          aria-label="Показати менше фото до/після"
+        >
+          Показати менше
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button>
+        <svg class="animated-btn-icon">
+          <defs>
+            <filter id="goo-7" x="0%" y="0%" width="100%" height="100%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                result="blur"
+                stdDeviation="10"
+              ></feGaussianBlur>
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                result="goo"
+              ></feColorMatrix>
+              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+          </defs>
+        </svg>
+      </li>
+     </ul>
+     
    </div>
       <div class="cleaning__banner banner banner--services">
       <h3 class="title--white title--no-margin title--services">

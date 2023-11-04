@@ -6,7 +6,8 @@ import { initializeSlider } from "./initialize-comparison-slider";
 
 const grid = document.querySelector('.comparison__slider-list');
 const buttonContainer = document.querySelector(".comparison__categories-list");
-const animatedBtnWrap = document.querySelector('.animated-btn-wrap');
+const showMoreBtn = document.querySelector('.btn-wrap--more');
+const showLessBtn = document.querySelector('.btn-wrap--less');
 const gutterSize = 20;
 let chosenCategory = 'Всі';
 let itemsPerPage = 6; 
@@ -19,7 +20,8 @@ initializeBeforeAfterBlock();
     initializeMasonry();
     buttonContainer.addEventListener('click', handleCategory);
     document.addEventListener('DOMContentLoaded', () => initializeSlider());
-    animatedBtnWrap.addEventListener('click', loadMoreItems);
+    showMoreBtn.addEventListener('click', showMoreItems);
+    showLessBtn.addEventListener('click', showLessItems);
   }
   
     function initializeMasonry() {
@@ -31,39 +33,37 @@ initializeBeforeAfterBlock();
    }
 
   function createFullComparisonSliderList() {
-    const container = document.querySelector('.comparison__slider-list');
-    comparisonImagesData.forEach(({ beforeName, afterName, desc, categories }, index) => {
+    const fragment = document.createDocumentFragment();
+    comparisonImagesData.forEach(({ beforeName, afterName, desc, categories }) => {
       const listItem = createComparisonSliderItem({beforeName, afterName, desc, categories});
-      listItem.classList.add('comparison-slider');
-          container.appendChild(listItem);
+      fragment.appendChild(listItem);
     });
+    grid.appendChild(fragment);
   }
 
   function createInitialComparisonSliderList() {
-    comparisonImagesData.slice(0, itemsPerPage).forEach(createComparisonSlider);
+    const fragment = document.createDocumentFragment(); 
+      comparisonImagesData.slice(0, itemsPerPage).forEach(item => {
+      const { beforeName, afterName, desc, categories } = item;
+      const listItem = createComparisonSliderItem({ beforeName, afterName, desc, categories });
+      fragment.appendChild(listItem); 
+      displayedItems++;
+    });
+  
+    grid.appendChild(fragment); 
   }
+
 
   function createComparisonSlider({ beforeName, afterName, desc, categories }) {
     const listItem = createComparisonSliderItem({ beforeName, afterName, desc, categories });
-    listItem.classList.add('comparison-slider');
     grid.appendChild(listItem);
-    
     displayedItems++;
   }  
 
-  function loadMoreItems() {
-    const itemsToLoad = comparisonImagesData.slice(displayedItems, displayedItems + itemsPerPage);
-    itemsToLoad.forEach(createComparisonSlider);
-    initializeSlider();
-    generateUpdatedMasonry();
-      if (displayedItems === comparisonImagesData.length ) {
-        animatedBtnWrap.classList.remove('isVisible');
-      }
-  }
- 
+  
 function createCategoryItemsList() {
-  createCategoryItem("Всі", 'Показати всі категорії');
   const uniqueCategories = getUniqueCategories();
+  createCategoryItem("Всі", 'Показати всі категорії');
   uniqueCategories.forEach(category => {
     const ariaLabel = `Фільтрувати за категорією ${category}`;
     createCategoryItem(category, ariaLabel);
@@ -104,7 +104,7 @@ function getUniqueCategories() {
     resetComparisonSliderList();
     updateComparisonSliderList();
     filterImages();
-    toggleShowMoreImagesBtn(chosenCategory);
+    toggleShowBtnsVisibility(chosenCategory);
     generateUpdatedMasonry();
     initializeSlider();
   }
@@ -112,6 +112,7 @@ function getUniqueCategories() {
   function resetComparisonSliderList() {
     grid.innerHTML ='';
   }
+
    function updateComparisonSliderList() {
     if(chosenCategory !== 'Всі') {
       createFullComparisonSliderList();
@@ -126,11 +127,7 @@ function getUniqueCategories() {
     btn.classList.add('category__button--active')
   }
 
-  function toggleShowMoreImagesBtn(chosenCategory) {
-    animatedBtnWrap.classList.toggle('isVisible', chosenCategory === 'Всі');
-  }
-
-  function updateChosenCategory(text) {
+    function updateChosenCategory(text) {
     chosenCategory = text;
   }
 
@@ -151,4 +148,37 @@ function getUniqueCategories() {
       masonry.layout();
   }
 
+  function toggleShowBtnsVisibility(chosenCategory) {
+    showMoreBtn.classList.toggle('isVisible', chosenCategory === 'Всі');
+    showLessBtn.classList.remove('isVisible', chosenCategory === 'Всі');
+  }
+
+
+  function showMoreItems() {
+    const itemsToLoad = comparisonImagesData.slice(displayedItems, displayedItems + itemsPerPage);
+    itemsToLoad.forEach(createComparisonSlider);
+    initializeSlider();
+    generateUpdatedMasonry();
+    updateButtonsVisibility();
+    }
+
+
+  function showLessItems() {
+    displayedItems = displayedItems - itemsPerPage;
+    const items = grid.querySelectorAll('.comparison-slider');
+    const newItems  = Array.from(items).slice(0, items.length - itemsPerPage);
+    resetComparisonSliderList();
+    newItems.forEach(item => {
+      grid.appendChild(item);
+    });
+    initializeSlider();
+    generateUpdatedMasonry();
+    updateButtonsVisibility();
+   
+  }
+
+  function updateButtonsVisibility() {
+    showLessBtn.classList.toggle('isVisible', displayedItems > itemsPerPage);
+    showMoreBtn.classList.toggle('isVisible', displayedItems < comparisonImagesData.length);
+  }
  

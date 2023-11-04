@@ -1,5 +1,6 @@
 export function createComparisonSliderItem({beforeName, afterName, desc, categories}) {
   const listItem = document.createElement('li');
+  listItem.classList.add('comparison-slider');
   const categoriesString = categories.join(', ');
   listItem.setAttribute("data-categories", categoriesString);
 
