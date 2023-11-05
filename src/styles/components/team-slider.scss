@@ -1,5 +1,6 @@
 .team__wrapper {
   position: relative;
+  height: 720px;
 }
 
 
@@ -103,6 +104,7 @@
   height: 200px;
   position: absolute;
   transition: all $cubic;
+  cursor: pointer;
   // transition: all ease 3000ms;
   
 }
@@ -179,7 +181,38 @@
 .team__circular-section.slide-1.team-active-slide {
   transform: translateX(-50%) translateY(-50%) rotate(-15deg) scale(1.4);
   
-
 }
 
+.team__member-info {
+  position: relative;
+  top: -20px;
+  margin: 0 auto;
+  border-radius: 30px;
+  text-align: center;
+  background-color: $card-hover-effect-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width:fit-content;
+  max-width: 420px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transition: all $cubic;
+}
 
+.member-info__title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.member-info__exp {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.member-info__quote {
+
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+}
