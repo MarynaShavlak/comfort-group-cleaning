@@ -132,9 +132,9 @@ export const teamMembersData = [
   },
   
   {
-    name: "Бартек Качмарек",
+    name: "Ніколь Садович",
     experience: '7 років',
-    memberID: 'member-28',
+    memberID: 'member-21',
     quote: "Чистота – головний закон здоров’я",
     category: 'universalCleaner',
   },
@@ -143,7 +143,7 @@ export const teamMembersData = [
     name: "Борис Сизов",
     experience: '5 років',
     memberID: 'member-20',
-    quote: "Turning mess into cleanliness, one room at a time",
+    quote: "Скажіть бруду 'Ні!'",
     category: 'universalCleaner',
   },
   

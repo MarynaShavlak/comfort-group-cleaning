@@ -64,7 +64,7 @@ gulp.task('images:dev', function() {
   .pipe(gulp.src('./src/images/**/*'))
   .pipe(changed('./build/images/'))
 	.pipe(newer('./build/images/'))
-	.pipe(imagemin({verbose:true}))
+	// .pipe(imagemin({verbose:true}))
 	.pipe(gulp.dest('./build/images/'))
 	.pipe(connect.reload())
 

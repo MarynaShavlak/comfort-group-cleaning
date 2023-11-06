@@ -76,13 +76,15 @@ export function copyToClipboard(text) {
   }
 
   export function makeArrayReverse(originalArray) {
-    const customReorderedArray = [
-      originalArray[1], 
-      originalArray[0],  
-      originalArray[5],  
-      originalArray[4],  
-      originalArray[3],  
-      originalArray[2]   
-    ];
+    if (originalArray.length < 2) {
+      return originalArray.slice();
+    }
+      const customReorderedArray = [...originalArray];
+     [customReorderedArray[0], customReorderedArray[1]] = [customReorderedArray[1], customReorderedArray[0]];
+
+    for (let i = 2, j = originalArray.length - 1; i < j; i++, j--) {
+      [customReorderedArray[i], customReorderedArray[j]] = [customReorderedArray[j], customReorderedArray[i]];
+    }
+  
     return customReorderedArray;
   }
