@@ -1,4 +1,7 @@
 import { teamMembersData } from "./team-data";
+const teamCategories = getUniqueCategories();
+const membersByCategory = groupTeamMembersByCategory(teamMembersData);
+console.log('membersByCategory : ', membersByCategory );
 
 
 function createCircularSlider(config) {
@@ -81,10 +84,9 @@ function handleSlideClick(e) {
         titleEl.innerHTML = name;
         expEl.innerHTML = `Досвід роботи: ${experience}`;
         quoteEl.innerHTML = `<i class="fa-solid fa-quote-left"></i> ${quote} <i class="fa-solid fa-quote-right"></i>`
-
-
-
     }
+
+    
 }
 
 createCircularSlider({
@@ -95,7 +97,24 @@ createCircularSlider({
     slideClasses: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
   });
 
+  function getUniqueCategories() {
+    const uniqueCategories = new Set();
+    teamMembersData.forEach(({ category }) => {
+        uniqueCategories.add(category);
+    }
+    )  
+     return Array.from(uniqueCategories);
+  }
 
-
-
-
+function groupTeamMembersByCategory(teamMembersData) {
+    return Object.values(
+      teamMembersData.reduce((categoryData, member) => {
+        const { category, name } = member;
+        if (!categoryData[category]) {
+          categoryData[category] = { name: category, members: [] };
+        }
+        categoryData[category].members.push(name);
+        return categoryData;
+      }, {})
+    );
+  }
