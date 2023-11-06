@@ -13,7 +13,7 @@
   }
 }
 
-.section--cleaning-types, .reviews, .section--buildings, .section--repair{
+.section--cleaning-types, .reviews, .section--buildings, .section--repair {
   border-bottom: 50px solid transparent;
   border-top: 50px solid transparent;
   position: relative;
@@ -49,8 +49,25 @@
   }
 }
 
+.section--team  {
+  position: relative;
+  border-bottom: 30px solid transparent;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 42px;
 
-.section--cleaning-types::before, .reviews::before, .section--buildings::before, .section--repair::before{
+  }
+  @media screen and (min-width: 1440px) {
+      border-bottom: 50px solid transparent;
+      padding-bottom: 66px;
+  }
+}
+
+
+
+.section--cleaning-types::before, 
+.reviews::before, 
+.section--buildings::before,
+ .section--repair::before {
   content: "";
   position: absolute;
   width: 110%;
@@ -84,6 +101,26 @@
     }
 }
 
+.section--team::after{
+  content: "";
+  position: absolute;
+  width: 110%;
+  left: -50px;
+  background-image: linear-gradient(to right, $first-additional-bg-color, $first-additional-bg-color,$first-additional-bg-color);
+  // background-image: linear-gradient(to right, red, red,red);
+  filter: blur(10px);
+  z-index: 2;
+    bottom: -50px;
+    height: 40px;
+  @media screen and (min-width: 1440px) {
+   bottom: -70px;
+    height: 50px;
+  }
+}
+
+
+
+
 
 .active-dark-theme .section--cleaning-types::before,
 .active-dark-theme .reviews::before, 
@@ -96,7 +133,7 @@
     background-image: linear-gradient(to right, $dark-add-4-color, $dark-add-4-color, $dark-add-4-color);
 }
 
-.active-dark-theme  .section--calc-banner:after{
+.active-dark-theme  .section--calc-banner:after, .active-dark-theme .section--team::after {
   background-image: linear-gradient(to right, $dark-add-color, $dark-add-color, $dark-add-color);
 }
 

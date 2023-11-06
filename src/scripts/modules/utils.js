@@ -74,3 +74,15 @@ export function copyToClipboard(text) {
     img.alt = alt;
     return img;
   }
+
+  export function makeArrayReverse(originalArray) {
+    const customReorderedArray = [
+      originalArray[1], 
+      originalArray[0],  
+      originalArray[5],  
+      originalArray[4],  
+      originalArray[3],  
+      originalArray[2]   
+    ];
+    return customReorderedArray;
+  }

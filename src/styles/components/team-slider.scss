@@ -1,6 +1,6 @@
 .team__wrapper {
   position: relative;
-  height: 720px;
+  height: 800px;
 }
 
 
@@ -20,6 +20,7 @@
 
 
 .team__slider-container {
+  position: relative;
   padding-left: 30px;
   padding-right: 30px;
   
@@ -216,3 +217,89 @@
   font-size: 20px;
   font-style: italic;
 }
+
+.team__category-list, .team__members-name-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team__members-name-list {
+  margin-top: 20px;
+  background-color: $main-accent-color;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+
+
+.team__category-item {
+  position: relative;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  z-index:1;
+  transition: color $cubic;
+  &:hover, &.category--active {
+    color: $primary-white-color;
+    z-index: 2;
+    &:before {
+      top:0;
+      z-index:-1;
+      
+    }
+  }
+
+}
+
+.team__category-item:before {
+  position: absolute;
+    top: calc(100% - 3px);
+  left: 0;
+  content: '';
+  width: 100%;
+  height: calc(100% + 3px);
+  z-index: 0;
+  background-color: $main-accent-color;
+  transition: all $cubic;
+}
+
+
+.team__name {
+  position: relative;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  z-index:1;
+  transition: color $cubic;
+  color: $primary-white-color;
+
+  &:before {
+    position: absolute;
+    top: calc(100% - 2px);
+    left: 0;
+    content: '';
+    width: 100%;
+    height: calc(100% + 2px);
+    z-index: 0;
+    background-color: $primary-white-color;
+    transition: all $cubic;
+  }
+
+
+  &:hover, &.name--active {
+    color: $primary-black-color;
+    z-index: 2;
+    &:before {
+      top:0;
+      z-index:-1;
+      
+    }
+  }
+}
+
+
