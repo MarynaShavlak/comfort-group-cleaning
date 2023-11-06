@@ -88,3 +88,104 @@ export function copyToClipboard(text) {
   
     return customReorderedArray;
   }
+
+  export function calculateSwipeCount(chosenMemberSlideIndex, quantity) {
+    const visibleItems = 3;
+    const activeItemSlideIndex = 2;
+
+    if (quantity === 6) {
+    return calculateSwipeCountFor6(quantity);
+    } else if (quantity === 9) {
+        return calculateSwipeCountFor9(quantity);
+    } else if (quantity === 3) {
+        return calculateSwipeCountFor3(quantity);
+    } else if (quantity === 4) {
+      return calculateSwipeCountFor4(quantity);
+  }
+
+
+
+    function calculateSwipeCountFor6(quantity) {
+        const diff = chosenMemberSlideIndex - activeItemSlideIndex;
+
+        if (diff > visibleItems) {
+            return 2;
+        } else if (diff < 0) {
+            return 1;
+        } else if (diff === visibleItems) {
+            return 3;
+        } else {
+            return -diff;
+        }
+    }
+
+    function calculateSwipeCountFor9(quantity) {
+        const diff = chosenMemberSlideIndex - activeItemSlideIndex;
+
+        switch (diff) {
+            case 7:
+                return diff + 4;
+            case 6:
+                return -diff;
+            case 5:
+                return 4;
+            case 4:
+                return 5;
+            case visibleItems:
+                return 6;
+            case 2:
+                return -2;
+            case 1:
+                return -1;
+            default:
+                return diff < 0 ? 1 : 0;
+        }
+    }
+
+    function calculateSwipeCountFor3(quantity) {
+        const diff = chosenMemberSlideIndex - activeItemSlideIndex;
+
+        if (diff === -1) {
+            return 1;
+        } else if (diff === 1) {
+            return -1;
+        }
+    }
+
+    function calculateSwipeCountFor4(quantity) {
+      const diff = chosenMemberSlideIndex - activeItemSlideIndex;
+
+      if (diff === -1) {
+          return 1;
+      } else if (diff === 1) {
+          return -1;
+      } else if (diff === 2) {
+        return 2;
+      }
+  }
+
+    
+}
+
+export  function getUniqueCategories(data) {
+  const uniqueCategories = new Set();
+  data.forEach(({ category }) => {
+      uniqueCategories.add(category);
+  }
+  )  
+  return Array.from(uniqueCategories);
+}
+
+
+export function groupTeamMembersByCategory(data) {
+  return Object.values(
+  data.reduce((categoryData, member) => {
+      const { category, name, memberID } = member;
+      if (!categoryData[category]) {
+      categoryData[category] = { name: category, members: [] };
+      }
+      categoryData[category].members.push({name, memberID});
+      return categoryData;
+  }, {})
+  );
+  }
