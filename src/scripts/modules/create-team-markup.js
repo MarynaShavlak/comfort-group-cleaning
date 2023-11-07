@@ -15,7 +15,7 @@ export function createCategoryList(categories,teamObj) {
   listItem.setAttribute('data-category', category)
   fragment.appendChild(listItem);
   });
-  list .appendChild(fragment);
+  list.appendChild(fragment);
 }
 
 export function createMembersNameList(membersByCategory, category) {
@@ -43,7 +43,7 @@ export function createCircularSliderMarkup(categoryName,  data) {
   const sliderElement = document.querySelector('.team__circular-slider');
   const filteredArray = data.filter(item => item.category === categoryName);
   const fragment = document.createDocumentFragment();
-  filteredArray.forEach((member, index) => {
+  filteredArray.forEach(({memberID, name, category}, index) => {
 
       const liElement = document.createElement('li');
       const slideUniqueClass  = `slide-${index + 1}`
@@ -52,20 +52,43 @@ export function createCircularSliderMarkup(categoryName,  data) {
       } else {
           liElement.classList.add('team__circular-section', slideUniqueClass );  
       }
-      liElement.setAttribute('data-member', member.memberID);
-      liElement.setAttribute('data-category', member.category);
+      liElement.setAttribute('data-member',memberID);
+      liElement.setAttribute('data-category',category);
 
-      const imgElement = document.createElement('img');
-      imgElement.src = `images/team/${member.memberID}.png`;
-      imgElement.alt = 'Фото члена команди';
+      const imgElement =  createTeamImage(memberID, name)
+      // imgElement.src = `images/team/${member.memberID}.png`;
+      // imgElement.alt = 'Фото члена команди';
       // imgElement.width = 'auto';
       // imgElement.height = 'auto';
 
       liElement.appendChild(imgElement);
       fragment.appendChild(liElement);
-     
+    
   
   });
   sliderElement.appendChild(fragment);
   return sliderElement;
 }
+
+
+function createTeamImage(imageName, altText) {
+  const webpSrcset = `images/team/${imageName}.webp`;
+  const pngSrcset =`images/team/${imageName}.png`;
+  const picture = document.createElement('picture');
+  picture.className = 'team__image'
+  const webpSource = document.createElement('source');
+  webpSource.setAttribute('srcset', webpSrcset);
+  webpSource.setAttribute('type', 'image/webp');
+  const pngSource = document.createElement('source');
+  pngSource.setAttribute('srcset', pngSrcset);
+  pngSource.setAttribute('type', 'image/png');
+  const img = document.createElement('img');
+  img.setAttribute('src', pngSrcset);
+  img.setAttribute('alt', `Фото члена команди на ім'я ${altText}`);
+  
+  picture.appendChild(webpSource);
+  picture.appendChild(pngSource);
+  picture.appendChild(img);
+  
+  return picture;
+  }

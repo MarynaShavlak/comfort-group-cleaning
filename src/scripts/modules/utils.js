@@ -189,3 +189,12 @@ export function groupTeamMembersByCategory(data) {
   }, {})
   );
   }
+
+  export function createSlideClassesList(category, data) {
+    const membersQuantity = data.filter(item => item.category === category).length;
+    let slideClasses = [];
+    for (let i = 1; i <= membersQuantity; i++) {
+        slideClasses.push('slide-' + i);
+    }
+    return slideClasses;
+}

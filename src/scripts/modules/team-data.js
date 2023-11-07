@@ -116,7 +116,7 @@ export const teamMembersData = [
   },
   
   {
-    name: "Марк Левандовский",
+    name: "Марк Зінчук",
     experience: '3 роки',
     memberID: 'member-27',
     quote: "Прибирання — це процес перетворення хаосу на спокій",
