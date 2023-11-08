@@ -193,6 +193,74 @@ Taking pride in maintaining top-notch performance, accessibility, best practices
 
   Committed to maintaining and enhancing these high standards, the goal is to ensure an exceptional experience for all users.
 
+## 🖼️ Screenshots
+
+<table>
+  <tr>
+    <td>Interactive Room Visualizations</td>
+     <td>Custom Attractive UI Effects</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/2.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/12.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+    <td>Custom Calendar with Date Blocking</td>
+     <td>Enhanced Time Selection with Schedule Integration</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/3.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/4.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  </tr>
+    <td>Error Notification and Field Validation</td>
+     <td>FAQ Accordion</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/5.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/1.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  <tr>
+    <td>Seasonal Discount Slider</td>
+     <td>Slider Banner with Dynamic Images</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/13.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/14.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  <tr>
+    <td>Dry Cleaning Cost Slider</td>
+     <td>Photo Comparison Slider and Category Filters</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/15.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/16.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  <tr>
+    <td>Customized Cleaning Selection and Instant Cost Estimation</td>
+     <td>Trust-Building Section, Dynamic Theme Toggle</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/7.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/8.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  </tr>
+    <td>Comprehensive Service Information, Sidebar Menu</td>
+     <td>Responsive Design</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/9.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/10.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  </tr>
+    <td>Custom 404 Error Page, Address with Interactive Map</td>
+     <td> Order Success Confirmation Page</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/11.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/6.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+ </table>
+
 ## ⚙️ Features
 
 ### 🧹 Versatile Cleaning Services :
@@ -384,73 +452,6 @@ user sessions, and higher conversion rates.
 
 Optimizing images for Retina displays and using the WebP format is paramount for ensuring an exceptional user experience. High-resolution images cater to users with cutting-edge displays, delivering impeccable visual quality. Simultaneously, the use of WebP images significantly improves website performance, reducing load times and enhancing overall usability. By incorporating these optimization techniques, we prioritize both image quality and site performance, offering users the best of both worlds.
 
-## 🖼️ Screenshots
-
-<table>
-  <tr>
-    <td>Interactive Room Visualizations</td>
-     <td>Custom Attractive UI Effects</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/2.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/12.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-    <td>Custom Calendar with Date Blocking</td>
-     <td>Enhanced Time Selection with Schedule Integration</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/3.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/4.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  </tr>
-    <td>Error Notification and Field Validation</td>
-     <td>FAQ Accordion</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/5.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/1.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  <tr>
-    <td>Seasonal Discount Slider</td>
-     <td>Slider Banner with Dynamic Images</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/13.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/14.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  <tr>
-    <td>Dry Cleaning Cost Slider</td>
-     <td>Photo Comparison Slider and Category Filters</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/15.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/16.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  <tr>
-    <td>Customized Cleaning Selection and Instant Cost Estimation</td>
-     <td>Trust-Building Section, Dynamic Theme Toggle</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/7.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/8.gif' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  </tr>
-    <td>Comprehensive Service Information, Sidebar Menu</td>
-     <td>Responsive Design</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/9.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/10.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
-  </tr>
-    <td>Custom 404 Error Page, Address with Interactive Map</td>
-     <td> Order Success Confirmation Page</td>
-  </tr>
-  <tr>
-    <td><img src='/src/images/screens/11.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/6.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-  </tr>
- </table>
 
 ## :hourglass:Roadmap
 
