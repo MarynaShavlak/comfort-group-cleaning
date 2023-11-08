@@ -286,18 +286,23 @@ take action, ultimately driving conversions and increasing customer
 satisfaction.
 
 ### 🍁 Seasonal Discount Slider with Vertical Discount Categories :
+
 The Seasonal Discount Slider with Vertical Discount Categories is a crucial element of our cleaning company's website. It offers an attractive way to switch between seasons, with icons representing each season. Within each season, users can vertically explore three discount categories, each with detailed information, including the discount's name, terms, eligible groups, and promo codes. This feature improves the user experience by making discounts easy to discover and understand, encouraging more frequent bookings and informed decision-making. It also aligns our website with seasonal customer needs, setting us apart from competitors and showcasing our commitment to transparency and user convenience.
 
 ### 🧼  Slider Banner with Dynamic Images:
+
 The Slider Banner with Dynamic Images on our cleaning company's website is a visually engaging element that showcases our services effectively. It automatically cycles through three slides featuring Home Cleaning, Commercial Organization Cleaning, and After Repair Cleaning, with dynamic images that respond to mouse movements. This feature captures users' attention, conveys professionalism and quality, and encourages them to explore further. By visually presenting our services, it helps users quickly find what they need, setting our website apart and reinforcing our commitment to quality and innovation. This slider is a key tool for enhancing user experience, conveying information, and strengthening our brand.
 
 ### 🛋️ Dry Cleaning Cost Slider:
+
 The Dry Cleaning Cost Slider is an engaging tool that offers users a visually appealing way to explore dry cleaning costs and timeframes for various items. It consists of multiple slides, each representing a specific item like a sofa, carpet, armchair, mattress, pillow, curtains, and more. The automatic scrolling and attractive design capture users' attention, encouraging them to stay longer on our site and explore our services. This slider presents cost and time information in a clear and concise manner, enabling users to compare services easily. It also offers a pause feature on hover for a more user-friendly experience and allows users to click on specific slides for quick navigation. The subtle blur effect on inactive slides helps focus attention on the selected item, making information clear and manageable. Overall, the Interactive Dry Cleaning Cost Slider enhances our website by engaging users and providing convenient access to important information.
 
 ### 📷 Photo Comparison Slider and Category Filters:
+
 Our Interactive Comparison Slider and Category Filter system showcases our cleaning services with before-and-after photos, offering an engaging visual experience. Users can easily control the slider to see our work's transformation, making our website memorable and engaging. The category filter simplifies finding specific examples in various areas, such as windows, furniture, kitchen, bathroom, and more. Users can customize their content to meet their needs, and we offer a "Show More" and "Show Less" option in the 'All' category to demonstrate the quality of our services and build trust with potential clients.
 
 ### 👤 Team Showcase Slider:
+
 The Team Showcase Slider is a vital feature for your cleaning company's website. It enables users to explore and learn about team members, their roles, and experiences, fostering trust and transparency. Users can easily navigate through different team categories and view essential information, instilling confidence. Interaction options include clicking on a member's name or photo, enhancing the user experience. The inclusion of guiding mottos highlights your company's values and commitment to excellence, humanizing the team and building trust with website visitors.
 
 ### ⬆️ Smooth Scroll to Top :
@@ -405,7 +410,23 @@ Optimizing images for Retina displays and using the WebP format is paramount for
     <td><img src='/src/images/screens/5.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
     <td><img src='/src/images/screens/1.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
   </tr>
+  <tr>
+    <td>Seasonal Discount Slider</td>
+     <td>Slider Banner with Dynamic Images</td>
   </tr>
+  <tr>
+    <td><img src='/src/images/screens/13.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/14.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  <tr>
+    <td>Dry Cleaning Cost Slider</td>
+     <td>Photo Comparison Slider and Category Filters</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/15.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/16.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  <tr>
     <td>Customized Cleaning Selection and Instant Cost Estimation</td>
      <td>Trust-Building Section, Dynamic Theme Toggle</td>
   </tr>
