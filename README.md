@@ -384,7 +384,7 @@ Optimizing images for Retina displays and using the WebP format is paramount for
 <table>
   <tr>
     <td>Interactive Room Visualizations</td>
-     <td>Order Success Confirmation Page</td>
+     <td>Custom Attractive UI Effects</td>
   </tr>
   <tr>
     <td><img src='/src/images/screens/2.gif' width=400 alt="скріншот  cторінки сайту" ></td>
@@ -411,7 +411,7 @@ Optimizing images for Retina displays and using the WebP format is paramount for
   </tr>
   <tr>
     <td><img src='/src/images/screens/7.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
-    <td><img src='/src/images/screens/8.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/8.gif' width=400 alt="скріншот  cторінки сайту" ></td>
   </tr>
   </tr>
     <td>Comprehensive Service Information, Sidebar Menu</td>
@@ -423,7 +423,7 @@ Optimizing images for Retina displays and using the WebP format is paramount for
   </tr>
   </tr>
     <td>Custom 404 Error Page, Address with Interactive Map</td>
-     <td>Custom Attractive UI Effects</td>
+     <td> Order Success Confirmation Page</td>
   </tr>
   <tr>
     <td><img src='/src/images/screens/11.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
