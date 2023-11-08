@@ -252,6 +252,14 @@ Taking pride in maintaining top-notch performance, accessibility, best practices
     <td><img src='/src/images/screens/10.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
   </tr>
   </tr>
+    <td>Team Showcase Slider</td>
+     <td>Contacts Modal</td>
+  </tr>
+  <tr>
+    <td><img src='/src/images/screens/17.gif' width=400 alt="скріншот  cторінки сайту" ></td>
+    <td><img src='/src/images/screens/18.jpg' width=400 alt="скріншот  cторінки сайту" ></td>
+  </tr>
+  </tr>
     <td>Custom 404 Error Page, Address with Interactive Map</td>
      <td> Order Success Confirmation Page</td>
   </tr>
