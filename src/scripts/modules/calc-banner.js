@@ -54,12 +54,11 @@ function handleMouseMove(event) {
     const layers = $(this).data('value');
     const x = ($(window).innerWidth() - event.pageX * layers) / 100;
     const y = ($(window).innerHeight() - event.pageY * layers) / 100;
-    // $(this).css('margin-left', x + "px").css('margin-top', y + 'px');
     gsap.to(this, {
-      duration: 0.3, // Animation duration
-      marginLeft: x + 'px', // Animate margin-left
-      marginTop: y + 'px', // Animate margin-top
-      ease: 'power2.out', // Easing function
+      duration: 0.3,
+      marginLeft: x + 'px', 
+      marginTop: y + 'px', 
+      ease: 'power2.out', 
     });
   });
 }

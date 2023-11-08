@@ -288,8 +288,17 @@ satisfaction.
 ### 🍁 Seasonal Discount Slider with Vertical Discount Categories :
 The Seasonal Discount Slider with Vertical Discount Categories is a crucial element of our cleaning company's website. It offers an attractive way to switch between seasons, with icons representing each season. Within each season, users can vertically explore three discount categories, each with detailed information, including the discount's name, terms, eligible groups, and promo codes. This feature improves the user experience by making discounts easy to discover and understand, encouraging more frequent bookings and informed decision-making. It also aligns our website with seasonal customer needs, setting us apart from competitors and showcasing our commitment to transparency and user convenience.
 
-### 🧼 Interactive Slider Banner with Dynamic Images:
-The Interactive Slider Banner with Dynamic Images on our cleaning company's website is a visually engaging element that showcases our services effectively. It automatically cycles through three slides featuring Home Cleaning, Commercial Organization Cleaning, and After Repair Cleaning, with dynamic images that respond to mouse movements. This feature captures users' attention, conveys professionalism and quality, and encourages them to explore further. By visually presenting our services, it helps users quickly find what they need, setting our website apart and reinforcing our commitment to quality and innovation. This slider is a key tool for enhancing user experience, conveying information, and strengthening our brand.
+### 🧼  Slider Banner with Dynamic Images:
+The Slider Banner with Dynamic Images on our cleaning company's website is a visually engaging element that showcases our services effectively. It automatically cycles through three slides featuring Home Cleaning, Commercial Organization Cleaning, and After Repair Cleaning, with dynamic images that respond to mouse movements. This feature captures users' attention, conveys professionalism and quality, and encourages them to explore further. By visually presenting our services, it helps users quickly find what they need, setting our website apart and reinforcing our commitment to quality and innovation. This slider is a key tool for enhancing user experience, conveying information, and strengthening our brand.
+
+### 🛋️ Dry Cleaning Cost Slider:
+The Dry Cleaning Cost Slider is an engaging tool that offers users a visually appealing way to explore dry cleaning costs and timeframes for various items. It consists of multiple slides, each representing a specific item like a sofa, carpet, armchair, mattress, pillow, curtains, and more. The automatic scrolling and attractive design capture users' attention, encouraging them to stay longer on our site and explore our services. This slider presents cost and time information in a clear and concise manner, enabling users to compare services easily. It also offers a pause feature on hover for a more user-friendly experience and allows users to click on specific slides for quick navigation. The subtle blur effect on inactive slides helps focus attention on the selected item, making information clear and manageable. Overall, the Interactive Dry Cleaning Cost Slider enhances our website by engaging users and providing convenient access to important information.
+
+### 📷 Photo Comparison Slider and Category Filters:
+Our Interactive Comparison Slider and Category Filter system showcases our cleaning services with before-and-after photos, offering an engaging visual experience. Users can easily control the slider to see our work's transformation, making our website memorable and engaging. The category filter simplifies finding specific examples in various areas, such as windows, furniture, kitchen, bathroom, and more. Users can customize their content to meet their needs, and we offer a "Show More" and "Show Less" option in the 'All' category to demonstrate the quality of our services and build trust with potential clients.
+
+### 👤 Team Showcase Slider:
+The Team Showcase Slider is a vital feature for your cleaning company's website. It enables users to explore and learn about team members, their roles, and experiences, fostering trust and transparency. Users can easily navigate through different team categories and view essential information, instilling confidence. Interaction options include clicking on a member's name or photo, enhancing the user experience. The inclusion of guiding mottos highlights your company's values and commitment to excellence, humanizing the team and building trust with website visitors.
 
 ### ⬆️ Smooth Scroll to Top :
 
@@ -435,10 +444,13 @@ Optimizing images for Retina displays and using the WebP format is paramount for
 
 ## :handshake: Acknowledgments
 
-A special note of appreciation goes out to
-[Body scroll lock](https://github.com/willmcpo/body-scroll-lock#readme) for
-their exceptional contribution in effortlessly controlling and managing scroll
-behavior.
+A special note of appreciation goes out to:
+- [Body scroll lock](https://github.com/willmcpo/body-scroll-lock#readme) for your remarkable contribution in seamlessly controlling and managing scroll behavior.
+- [masonry-layout](https://masonry.desandro.com/). Your expertise in positioning elements with the finesse of a skilled mason fitting stones in a wall has been invaluable to my project.
+- [vanilla-tilt](https://micku7zu.github.io/vanilla-tilt.js/index.html): I acknowledge your outstanding animations that have enriched my project.
+- [gsap](https://gsap.com/): I am thankful for your exceptional animations that have added a dynamic element to my project.
+
+
 
 ## Conclusion
 
@@ -447,14 +459,7 @@ user-centered design. By leveraging a variety of technologies and implementing a
 wide range of features, the website offers a convenient and efficient solution
 for users seeking cleaning services.
 
-The website's core features, such as the versatile cleaning services, FAQ
-accordion, Google Maps API integration, interactive room visualizations, and the
-smooth order placement process, collectively contribute to an exceptional user
-experience. Users can easily customize their cleaning preferences, select
-convenient dates and times, and gain confidence through transparent cost
-estimations. The inclusion of customer feedback, trust-building elements, and a
-dynamic theme toggle further reinforces the website's commitment to excellence
-and user satisfaction.
+The website offers versatile cleaning services, an FAQ accordion, Google Maps integration, interactive room visualizations, and a smooth order placement process for an exceptional user experience. Users can easily customize cleaning preferences, select convenient dates and times, and get transparent cost estimates. Customer feedback, trust-building elements, and a dynamic theme toggle reinforce our commitment to excellence. The Seasonal Discount Slider simplifies seasonal discounts, while the Slider Banner with Dynamic Images showcases our services professionally. The Dry Cleaning Cost Slider presents costs visually, and the Photo Comparison Slider and Category Filters system display before-and-after photos. The Team Showcase Slider fosters trust and transparency.
 
 Comfort Group's website is a shining example of how technology can streamline
 the cleaning service industry and deliver exceptional value to customers. As
