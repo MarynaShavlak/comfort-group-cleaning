@@ -35,3 +35,5 @@ locationInputList.forEach(function (locationInput) {
 
   handleInputFocusAndNotEmpty({ target: locationInput });
 });
+
+
