@@ -11,6 +11,8 @@ schemaTypes.forEach((type, index) => {
  const swiperInitialized = initializeSwiper();
  container.addEventListener("mouseover", showDescriptionOnHover);
 container.addEventListener("mouseout", hideDescriptionOnHoverOut);
+const slideList = document.querySelectorAll('.swiper-slide');
+  [...slideList].forEach(item => item.setAttribute('role', 'Слайд'));
 
   function initializeSwiper() {
     return new Swiper(".swiper-container", {

@@ -7,6 +7,8 @@ const menu = [
   'Після ремонту',
 ];
 const swiper = initializeSwiper();
+const slideList = document.querySelectorAll('.swiper-slide');
+  [...slideList].forEach(item => item.setAttribute('role', 'Слайд'));
 
 
 function initializeSwiper() {

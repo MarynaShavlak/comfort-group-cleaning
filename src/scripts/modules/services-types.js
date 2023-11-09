@@ -7,6 +7,8 @@ import { servicesItemsData, drycleanData
  createServiceItemsList();
  createDrycleanItemsList();
  const drycleanSwiper = initializeDrycleanSwiper();
+ const slideList = document.querySelectorAll('.swiper-slide');
+  [...slideList].forEach(item => item.setAttribute('role', 'Слайд'));
 
  drycleanSliderEventHandlers(drycleanSwiper);
  function initializeDrycleanSwiper() {

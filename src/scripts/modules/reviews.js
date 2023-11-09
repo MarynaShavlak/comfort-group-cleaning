@@ -5,6 +5,7 @@ import { chunkArray, createPicture} from "./utils";
 let currentReviewBlock = 1;
 document.addEventListener("DOMContentLoaded", initializeReviewSwiper);
 
+
 function initializeReviewSwiper() {
   const reviewsList = document.querySelector('.reviews__swiper');
   const mobileReviewsList = document.querySelector('.mobile__reviews-list');
@@ -17,6 +18,10 @@ function initializeReviewSwiper() {
   const gallery = initializeGallery('.gallery');
   reviewsSliderEventHandlers(gallery);
   showMoreReviewsBtn.addEventListener('click', () => showMoreReviews(mobileReviewsList, showMoreReviewsBtn));
+  const slideList = document.querySelectorAll('.swiper-slide');
+  [...slideList].forEach(item => item.setAttribute('role', 'Слайд'));
+
+
 }
 
 function initializeReviews(reviewsList, mobileReviewsList, chunkedReviews) {

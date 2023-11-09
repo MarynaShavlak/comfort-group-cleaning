@@ -10,7 +10,9 @@ const externalSwiper = initializeExternalSwiper(initialExternalSlide);
 
 const innerSliderContainers = document.querySelectorAll('.swiper-container-nested');
 innerSliderContainers.forEach(initializeInnerSwiper);
-externalSliderContainer.addEventListener('click', handleCopyPromo)
+externalSliderContainer.addEventListener('click', handleCopyPromo);
+const slideList = document.querySelectorAll('.swiper-slide');
+  [...slideList].forEach(item => item.setAttribute('role', 'Слайд'));
 
 function initializeExternalSwiper(initialSlide) {
   return new Swiper('.swiper-container-parent', {
