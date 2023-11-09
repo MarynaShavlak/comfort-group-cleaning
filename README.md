@@ -181,7 +181,7 @@ Taking pride in maintaining top-notch performance, accessibility, best practices
 
   | Page                | Performance | Accessibility | Best Practices | SEO |
   |---------------------|-------------|---------------|----------------|-----|
-  | Home Page           | 96          | 100           | 92             | 100 |
+  | Home Page           | 96          | 95            | 95             | 100 |
   | Office Page         | 97          | 100           | 92             | 100 |
   | After Repair Page   | 97          | 100           | 92             | 100 |
   | Calculator Page     | 98          | 100           | 92             | 100 |
