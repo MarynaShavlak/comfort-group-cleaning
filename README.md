@@ -83,8 +83,7 @@ user experience:
 
 ## :movie_camera: Visual Showcase
 
-https://github.com/MarynaShavlak/comfort-group-cleaning/assets/111526360/baccf78d-bb1c-4e20-a8ae-125e8e3a3eb3
-
+https://github.com/MarynaShavlak/comfort-group-cleaning/assets/111526360/d00f4750-0f4f-48da-9d60-e9a41eb1b0fb
 
 ### Prerequisites
 
