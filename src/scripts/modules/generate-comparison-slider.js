@@ -43,6 +43,8 @@ jpgSource.setAttribute('type', 'image/jpg');
 const img = document.createElement('img');
 img.setAttribute('src', jpgSrcset);
 img.setAttribute('alt', altText);
+img.setAttribute('width', '350');
+img.setAttribute('height', '375');
 
 picture.appendChild(webpSource);
 picture.appendChild(jpgSource);

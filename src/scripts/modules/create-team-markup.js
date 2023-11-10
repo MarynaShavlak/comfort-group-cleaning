@@ -56,11 +56,6 @@ export function createCircularSliderMarkup(categoryName,  data) {
       liElement.setAttribute('data-category',category);
 
       const imgElement =  createTeamImage(memberID, name)
-      // imgElement.src = `images/team/${member.memberID}.png`;
-      // imgElement.alt = 'Фото члена команди';
-      // imgElement.width = 'auto';
-      // imgElement.height = 'auto';
-
       liElement.appendChild(imgElement);
       fragment.appendChild(liElement);
     
@@ -84,6 +79,8 @@ function createTeamImage(imageName, altText) {
   pngSource.setAttribute('type', 'image/png');
   const img = document.createElement('img');
   img.setAttribute('src', pngSrcset);
+  img.setAttribute('width', '200');
+  img.setAttribute('height', '200');
   img.setAttribute('alt', `Фото члена команди на ім'я ${altText}`);
   
   picture.appendChild(webpSource);

@@ -181,12 +181,12 @@ Taking pride in maintaining top-notch performance, accessibility, best practices
   | Page                | Performance | Accessibility | Best Practices | SEO |
   |---------------------|-------------|---------------|----------------|-----|
   | Home Page           | 96          | 95            | 95             | 100 |
-  | Office Page         | 97          | 100           | 92             | 100 |
-  | After Repair Page   | 97          | 100           | 92             | 100 |
-  | Calculator Page     | 98          | 100           | 92             | 100 |
+  | Office Page         | 96          | 92            | 95             | 100 |
+  | After Repair Page   | 94          | 92            | 95             | 100 |
+  | Calculator Page     | 95          | 92            | 95             | 100 |
   | Services            | 98          | 100           | 92             | 100 |
   | Contacts            | 93          | 95            | 95             | 100 |
-  | FAQ                 | 95          | 100           | 92             | 100 |
+  | FAQ                 | 98          | 100           | 95             | 100 |
 
   *Note: Scores may vary slightly due to real-time updates and changes to the website.*
 
