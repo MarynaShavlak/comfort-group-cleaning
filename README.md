@@ -185,7 +185,7 @@ Taking pride in maintaining top-notch performance, accessibility, best practices
   | After Repair Page   | 94          | 92            | 95             | 100 |
   | Calculator Page     | 95          | 92            | 95             | 100 |
   | Services            | 98          | 100           | 92             | 100 |
-  | Contacts            | 94          | 95            | 95             | 100 |
+  | Contacts            | 95          | 95            | 95             | 100 |
   | FAQ                 | 98          | 100           | 95             | 100 |
 
   *Note: Scores may vary slightly due to real-time updates and changes to the website.*
