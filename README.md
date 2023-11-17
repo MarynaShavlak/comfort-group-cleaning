@@ -75,7 +75,7 @@ user experience:
   centralized repository for storing the codebase, facilitating version control,
   issue tracking, and collaboration among developers.
 - ![Responsive Design](https://img.shields.io/badge/Responsive%20Design-Implemented-blue)
-  **Responsive design** ensures that the game adapts to different screen sizes
+  **Responsive design** ensures that the website adapts to different screen sizes
   and devices. By utilizing CSS media queries and flexible layouts, it provides
   an optimal user experience across various platforms, enhancing accessibility,
   satisfaction, and engagement.
