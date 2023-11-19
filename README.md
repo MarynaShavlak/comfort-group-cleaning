@@ -62,6 +62,8 @@ user experience:
   accordion, modals, form data collection with error checking, custom calendar
   and time picker, Google Maps location selection, item selection and quality
   adjustment, and calculates the total cost of each user's cleaning order.
+  - ![jQuery](https://img.shields.io/badge/jQuery-Used-yellow)
+  **jQuery** is integrated into the project to simplify DOM manipulation and streamline the handling of various interactive elements.
 - ![BEM Methodology](https://img.shields.io/badge/BEM%20Methodology-Used-purple)
   The **BEM methodology** organizes the codebase, making it more maintainable
   and scalable by breaking down components into reusable building blocks. It
